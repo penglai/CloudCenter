@@ -1,0 +1,6 @@
+.settings
+.buildpath
+.project
+/app/assets
+/app/runtime
+/app/modules/mywork/assets
