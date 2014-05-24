@@ -1,0 +1,54 @@
+<?php
+class linkCs extends commonModel{
+	public $id;
+	public $name;
+	public $password;
+	public $tel;
+	public $province;
+	public $city;
+	public $district;
+	public $userName;
+	public $address;
+	public $cdate;
+	public $status;
+	public $lastDate;
+	public $remark;
+	public $qq;
+	public $csTel;
+	public $loginName;
+	
+	function __construct(&$db = ''){
+		if (empty($db)){
+			$this->db = new simpleDb();
+		} else {
+			$this->db = $db;
+		}
+		$this->dbSheet = 'cs';
+	}
+	
+	/**
+	 * 列表使用
+	 */
+	function getList($from,$limit)
+	{
+		$sql = "select a.*,b.name as provinceName,c.name as cityName,d.name as districtName 
+				from cs a
+				left join province b on a.province = b.id
+				left join city c on a.city = c.id
+				left join district d on a.district = d.id
+				where status > 0
+				order by id desc limit $from,$limit				
+				";
+		return $this->db->query_array($sql);
+	}
+	
+	/**
+	 * 列表使用
+	 */
+	function getListCount()
+	{
+		$sql = "select count(*) as num from cs where status > 0 ";
+		$res = $this->db->query_array($sql);
+		return $res[0]['num'];
+	}
+}
