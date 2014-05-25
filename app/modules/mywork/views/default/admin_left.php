@@ -142,7 +142,7 @@ H1 a {
 <table width="100%" height="280" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2FB">
   <tr>
     <td width="182" valign="top"><div id="container">
-      <h1 class="type"><a href="javascript:void(0)">代理商管理</a></h1>
+      <h1 class="type"><a href="javascript:void(0)">内容管理</a></h1>
       <div class="content">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
@@ -150,11 +150,13 @@ H1 a {
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="/mywork/cs/" target="main">代理商列表</a></li>
-		  <li><a href="/mywork/cs/add" target="main">添加代理商</a></li>
+          <li><a href="/mywork/cs/" target="main">内容列表</a></li>
+		  <li><a href="/mywork/cs/add" target="main">添加内容</a></li>
         </ul>
       </div>
-      <h1 class="type"><a href="javascript:void(0)">服务管理</a></h1>
+	  
+	  
+	   <h1 class="type"><a href="javascript:void(0)">首页大图</a></h1>
       <div class="content">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
@@ -162,14 +164,30 @@ H1 a {
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="/mywork/service" target="main">服务管理</a></li>
-		  <li><a href="/mywork/service/add" target="main">添加服务</a></li>
+          <li><a href="/mywork/cs/" target="main">图片列表</a></li>
+		  <li><a href="/mywork/cs/add" target="main">添加图片</a></li>
+        </ul>
+      </div>
+	  
+	  
+	  
+	  
+      <h1 class="type"><a href="javascript:void(0)">频道管理</a></h1>
+      <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="/static/admin/images/menu_topline.gif" width="182" height="5" /></td>
+          </tr>
+        </table>
+        <ul class="MM">
+          <li><a href="/mywork/service" target="main">频道列表</a></li>
+		  <li><a href="/mywork/service/add" target="main">添加频道</a></li>
         </ul>
       </div>
       
 	 
 	  
-	   <h1 class="type"><a href="javascript:void(0)">模板管理</a></h1>
+	   <h1 class="type"><a href="javascript:void(0)">入住企业</a></h1>
       <div class="content">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
@@ -177,14 +195,28 @@ H1 a {
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="/mywork/template" target="main">模板管理</a></li>
-		 <li><a href="/mywork/template/add" target="main">添加模板</a></li>
+          <li><a href="/mywork/template" target="main">企业列表</a></li>
+		 <li><a href="/mywork/template/add" target="main">添加企业</a></li>
         </ul>
       </div>
 	  
-	  <!--
 	  
-	   <h1 class="type"><a href="javascript:void(0)">管理员管理</a></h1>
+	  <h1 class="type"><a href="javascript:void(0)">友情链接</a></h1>
+      <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="/static/admin/images/menu_topline.gif" width="182" height="5" /></td>
+          </tr>
+        </table>
+        <ul class="MM">
+          <li><a href="/mywork/template" target="main">友情链接</a></li>
+		 <li><a href="/mywork/template/add" target="main">添加链接</a></li>
+        </ul>
+      </div>
+	  
+	 
+	  
+	   <h1 class="type"><a href="javascript:void(0)">系统管理</a></h1>
       <div class="content">
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
@@ -196,7 +228,7 @@ H1 a {
  
         </ul>
       </div>
-	  -->
+	 
 	  
       </div>
         <script type="text/javascript">

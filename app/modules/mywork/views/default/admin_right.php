@@ -30,15 +30,17 @@ body {
         <td valign="top">&nbsp;</td>
       </tr>
       <tr>
-        <td colspan="2" valign="top"><span class="left_bt">感谢您使用 滑雪营销管理系统 </span><br>
+        <td colspan="2" valign="top"><span class="left_bt">感谢您使用 云中心后台管理系统 </span><br>
               <br>
             <span class="left_txt">&nbsp;<img src="/static/admin/images/ts.gif" width="16" height="16"> 提示：<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您现在使用的是小宝公司开发的一套用于滑雪场营销管理的专业系统！如果您有任何疑问请点左下解的</span><span class="left_ts">在线客服</span><span class="left_txt">进行咨询！<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;滑雪营销方案完美设置，一站通使用方式，功能强大，操作简单，后台操作易如反掌，只需会打字，会上网，就会管理系统！<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此程序是滑雪场营销管理的首选方案！　 <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您现在使用的是盛浩优创公司开发的一套用于房地产网站后台管理的专业系统！如果您有任何疑问请点左下解的</span><span class="left_ts">在线客服</span><span class="left_txt">进行咨询！<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;云中心后台方案完美设置，一站通使用方式，功能强大，操作简单，后台操作易如反掌，只需会打字，会上网，就会管理系统！<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此程序是房地产网站后台管理的首选方案！　 <br>
 </span></td>
         <td width="7%">&nbsp;</td>
-        <td width="40%" valign="top"><table width="100%" height="144" border="0" cellpadding="0" cellspacing="0" class="line_table">
+        <td width="40%" valign="top">
+		<!--
+		<table width="100%" height="144" border="0" cellpadding="0" cellspacing="0" class="line_table">
           <tr>
             <td width="7%" height="27" background="/static/admin/images/news-title-bg.gif"><img src="/static/admin/images/news-title-bg.gif" width="2" height="27"></td>
             <td width="93%" background="/static/admin/images/news-title-bg.gif" class="left_bt2">最新动态</td>
@@ -50,7 +52,9 @@ body {
           <tr>
             <td height="5" colspan="2">&nbsp;</td>
           </tr>
-        </table></td>
+        </table>
+		-->
+		</td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
@@ -71,18 +75,17 @@ mainTable.tBodies[n].style.display="block";
 }
           </SCRIPT>
               <!--HTML部分-->
-              <TABLE width=72% border=0 cellPadding=0 cellSpacing=0 id=secTable>
+              <TABLE width=72% border=0 cellPadding=0 cellSpacing=0 id="secTable" >
                 <TBODY>
                   <TR align=middle height=20>
-                    <TD align="center" class=sec2 onclick=secBoard(0)>验证信息</TD>
-                    <TD align="center" class=sec1 onclick=secBoard(1)>统计信息</TD>
-                    <TD align="center" class=sec1 onclick=secBoard(2)>系统参数</TD>
-                    <TD align="center" class=sec1 onclick=secBoard(3)>版权说明</TD>
+                    <TD align="center" class=sec2 onclick= "secBoard(0)" >验证信息</TD>
+                    <TD align="center" class=sec1 onclick= "secBoard(1)" >统计信息</TD>
+                    <TD align="center" class=sec1 onclick= "secBoard(2)" >系统参数</TD>
+                    <TD align="center" class=sec1 onclick= "secBoard(3)" >版权说明</TD>
                   </TR>
                 </TBODY>
               </TABLE>
-          <TABLE class=main_tab id=mainTable cellSpacing=0
-cellPadding=0 width=100% border=0>
+          <TABLE class=main_tab id=mainTable cellSpacing=0 cellPadding=0 width=100% border=0>
                 <!--关于TBODY标记-->
                 <TBODY style="DISPLAY: block">
                   <TR>
@@ -95,7 +98,7 @@ cellPadding=0 width=100% border=0>
                           </TR>
                           <TR>
                             <TD width="4%" height="28" background="/static/admin/images/news-title-bg.gif"></TD>
-                            <TD height="25" colspan="2" background="/static/admin/images/news-title-bg.gif" class="left_txt">亲爱的<?$admininfo.realname?>： 欢迎登录！<font color="#FFFFFF" class="left_ts"><b></b></TD>
+                            <TD height="25" colspan="2" background="/static/admin/images/news-title-bg.gif" class="left_txt">亲爱的<?php echo $info['realName'];?>： 欢迎登录！</TD>
                           </TR>
 						  <!--
                           <TR>
@@ -215,12 +218,12 @@ cellPadding=0 width=100% border=0>
                           </TR>
                           <TR>
                             <TD width="4%" background="/static/admin/images/news-title-bg.gif"></TD>
-                            <TD width="91%" background="/static/admin/images/news-title-bg.gif" class="left_ts">《滑雪营销管理系统》程序说明：</TD>
+                            <TD width="91%" background="/static/admin/images/news-title-bg.gif" class="left_ts">《云中心后台管理系统》程序说明：</TD>
                             <TD width="5%" background="/static/admin/images/news-title-bg.gif" class="left_txt">&nbsp;</TD>
                           </TR>
                           <TR>
                             <TD bgcolor="#FAFBFC">&nbsp;</TD>
-                            <TD bgcolor="#FAFBFC" class="left_txt"><span class="left_ts">1、</span>本程序由www.maott.cn全新改造(QQ:274579567) </TD>
+                            <TD bgcolor="#FAFBFC" class="left_txt"><span class="left_ts">1、</span>本程序由盛浩优创自主研发。 </TD>
                             <TD bgcolor="#FAFBFC" class="left_txt">&nbsp;</TD>
                           </TR>
                           <TR>
@@ -230,12 +233,12 @@ cellPadding=0 width=100% border=0>
                           </TR>
                           <TR>
                             <TD bgcolor="#FAFBFC">&nbsp;</TD>
-                            <TD bgcolor="#FAFBFC" class="left_txt"><span class="left_ts">3、</span> 支持作者的劳动，请保留版权。</TD>
+                            <TD bgcolor="#FAFBFC" class="left_txt"><span class="left_ts">3、</span>支持作者的劳动，请保留版权。</TD>
                             <TD bgcolor="#FAFBFC" class="left_txt">&nbsp;</TD>
                           </TR>
                           <TR>
                             <TD bgcolor="#FAFBFC">&nbsp;</TD>
-                            <TD bgcolor="#FAFBFC" class="left_txt"><span class="left_ts">4、</span>程序使用，技术支持请联系www.maott.cn。</TD>
+                            <TD bgcolor="#FAFBFC" class="left_txt"><span class="left_ts">4、</span>程序使用，技术支持请联系盛浩优创。</TD>
                             <TD bgcolor="#FAFBFC" class="left_txt">&nbsp;</TD>
                           </TR>
                           <TR>
@@ -256,6 +259,7 @@ cellPadding=0 width=100% border=0>
           </tr>
         </table></td>
       </tr>
+	  <!--
       <tr>
         <td width="2%">&nbsp;</td>
         <td width="51%" class="left_txt"><img src="/static/admin/images/icon-mail2.gif" width="16" height="11"> 客户服务邮箱：274579567@qq.com<br>
@@ -263,6 +267,7 @@ cellPadding=0 width=100% border=0>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
       </tr>
+	  -->
     </table></td>
     <td background="/static/admin/images/mail_rightbg.gif">&nbsp;</td>
   </tr>

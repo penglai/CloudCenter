@@ -9,5 +9,5 @@ define('PM_NAME','link');
 define('PM_DB_HOST',"127.0.0.1");
 define('PM_DB_USER',"root");
 define('PM_DB_PASSWORD',"admin");
-define('PM_DB_NAME',"house");
+define('PM_DB_NAME',"cloudcenter");
 include PM_PATH_ROOT.'/config/common_inc.php';
