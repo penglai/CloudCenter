@@ -1,17 +1,17 @@
 <?php
 /**
- * 用户管理
+ * 频道管理
  * @author bao
  * 
  */
-class UserController extends Controller 
+class ClassController extends Controller 
 {
 	/**
 	 * 显示首页
 	 */
 	public function actionIndex() 
 	{
-		$data['name'] = "用户管理";
+		$data['name'] = "频道管理";
 		$dataModel = new linkUser();
 		$dataModel->initVar($dataModel);
 		
@@ -30,7 +30,7 @@ class UserController extends Controller
 	}
 	
 	/**
-	 * 添加用户
+	 * 添加频道
 	 */
 	public function actionAdd()
 	{
@@ -58,7 +58,7 @@ class UserController extends Controller
 	}
 	
 	/**
-	 *  编辑用户
+	 *  编辑频道
 	 */
 	public function actionModify()
 	{
@@ -67,7 +67,7 @@ class UserController extends Controller
 		$dataModel->id = $_REQUEST['id'];
 		$info = $dataModel->search();
 		if (empty($info)) {
-			$this->showmsg("用户不存在！");
+			$this->showmsg("频道不存在！");
 		}
 		$model = new UserForm();
 		if (isset($_POST['UserForm'])) {
@@ -100,7 +100,7 @@ class UserController extends Controller
 	
 	
 	/**
-	 *  删除用户
+	 *  删除频道
 	 */
 	public function actionDel()
 	{
@@ -109,7 +109,7 @@ class UserController extends Controller
 		$csModel->id = $_REQUEST['id'];
 		$csInfo = $csModel->search();
 		if (empty($csInfo)) {
-			$this->showmsg("用户不存在！");
+			$this->showmsg("频道不存在！");
 		}
 		$csModel = new linkCs();
 		$csModel->initVar($csModel);

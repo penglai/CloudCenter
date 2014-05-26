@@ -1,13 +1,12 @@
 <?php
-class CsModule extends CWebModule
+class OrmModule extends CWebModule
 {	
 	public function init ()
 	{
 		$this->setImport(
-			array('cs.models.*', 
-					'cs.components.*',
-					'cs.controllers.*',
-					)
+			array('mywork.models.*', 
+					'mywork.components.*',
+					'mywork.controllers.*')
 		);
 	}
 	
