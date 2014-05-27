@@ -54,6 +54,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .enter{ width: 100px; height: 16px; line-height: 16px; font-size: 12px; text-align: right; position: absolute; right: 0; top: 48px; color: #d2d2d2; font-family: "宋体"; }
 .enter a{ color: #d2d2d2; }
 .enter a:hover,.enter a.active{ color: white; }
+.enter a.active:hover{text-decoration: none;}
 .enter span{ margin: 0 4px; }
 
 .nav_list{height: 108px;}
