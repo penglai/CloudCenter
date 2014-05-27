@@ -72,9 +72,8 @@ class DefaultController extends CController
 	 */
 	public function actionLoginRight()
 	{
-		$userInfo = $this->checkIsLogin();
-		$data['info'] = $userInfo;
-		$this->render('admin_right',$data);
+		$this->checkIsLogin();
+		$this->render('admin_right');
 	}
 	
 	/**

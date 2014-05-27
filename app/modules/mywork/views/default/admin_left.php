@@ -150,8 +150,8 @@ H1 a {
           </tr>
         </table>
         <ul class="MM">
-          <li><a href="/mywork/cs/" target="main">内容列表</a></li>
-		  <li><a href="/mywork/cs/add" target="main">添加内容</a></li>
+          <li><a href="/mywork/content/" target="main">内容列表</a></li>
+		  <li><a href="/mywork/content/add" target="main">添加内容</a></li>
         </ul>
       </div>
 	  

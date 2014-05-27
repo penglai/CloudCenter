@@ -2965,3 +2965,79 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/05/27 15:01:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 15:01:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/27 17:28:16 [error] [exception.CException] exception 'CException' with message 'DefaultController 无法找到请求的视图 "admin_top".' in D:\cloudcenter\framework\web\CController.php:878
+Stack trace:
+#0 D:\cloudcenter\framework\web\CController.php(782): CController->renderPartial('admin_top', Array, true)
+#1 D:\cloudcenter\app\modules\mywork\controllers\DefaultController.php(67): CController->render('admin_top', Array)
+#2 D:\cloudcenter\framework\web\actions\CInlineAction.php(49): DefaultController->actionLoginTop()
+#3 D:\cloudcenter\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\cloudcenter\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\cloudcenter\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\cloudcenter\framework\web\CWebApplication.php(282): CController->run('logintop')
+#7 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('mywork/default/...')
+#8 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\cloudcenter\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/mywork/default/logintop
+---
+2014/05/27 17:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "static/css/404.css"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('static/css/404....')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/static/css/404.css
+HTTP_REFERER=http://cloud.com/mywork/default/logintop
+---
+2014/05/27 17:29:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "mywork/cs"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('mywork/cs')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mywork/cs/
+HTTP_REFERER=http://cloud.com/mywork/default/loginleft
+---
+2014/05/27 17:29:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "static/css/404.css"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('static/css/404....')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/static/css/404.css
+HTTP_REFERER=http://cloud.com/mywork/cs/
+---
+2014/05/27 18:01:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "mywork/cs/add"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('mywork/cs/add')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mywork/cs/add
+HTTP_REFERER=http://cloud.com/mywork/default/loginleft
+---
+2014/05/27 18:01:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "static/css/404.css"。' in D:\cloudcenter\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\cloudcenter\framework\web\CWebApplication.php(141): CWebApplication->runController('static/css/404....')
+#1 D:\cloudcenter\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\cloudcenter\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/static/css/404.css
+HTTP_REFERER=http://cloud.com/mywork/cs/add
+---

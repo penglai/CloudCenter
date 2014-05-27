@@ -1,22 +1,30 @@
-<?php $this->widget('application.widgets.common.adminList'); ?>
-<script>
-function edit(id){
-	window.location.href="/cs/user/modify/id/"+id;
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EEF2FB;
 }
-function del(id){
-	if (confirm("温馨提示：确定删除？")){
-		window.location.href="/cs/user/del/id/"+id;
-	}
-}
-</script>
+</style>
+<?php echo '<?php';?> $this->widget('application.widgets.common.adminList'); <?php echo '?>';?>
 <body >
-<form action="admin_drink.php?ac=drinksearch" method="post" >
+<script>
+	function edit(id){
+		window.location.href="/mywork/<?php echo $tableName;?>/modify/id/"+id;
+	}
+	function del(id){
+		if (confirm("温馨提示：确定删除？")){
+			window.location.href="/mywork/<?php echo $tableName;?>/del/id/"+id;
+		}
+	}
+</script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="17" height="29" valign="top" background="/static/admin/images/mail_leftbg.gif"><img src="/static/admin/images/left-top-right.gif" width="17" height="29" /></td>
     <td width="935" height="29" valign="top" background="/static/admin/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
       <tr>
-        <td height="31"><div class="titlebt"><?php echo $name;?></div></td>
+        <td height="31"><div class="titlebt"><?php echo '<?php';?> echo $name;<?php echo '?>';?></div></td>
       </tr>
     </table></td>
     <td width="16" valign="top" background="/static/admin/images/mail_rightbg.gif"><img src="/static/admin/images/nav-right-bg.gif" width="16" height="29" /></td>
@@ -30,40 +38,72 @@ function del(id){
       <tr>
         <td valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="83%"  class="left_txt">当前位置：<?php echo $name;?>
+            <td width="83%"  class="left_txt">当前位置：<?php echo '<?php';?> echo $name;列表<?php echo '?>';?>
 				&nbsp;&nbsp;&nbsp;&nbsp;
+				
 			</td>
           <td align="right" width="60" class="left_txt">
-			  <a href="/cs/user/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
-			  <a href="/cs/user/add">添加用户</a>
+			  <a href="/mywork/<?php echo $tableName;?>/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
+			  <a href="/mywork/<?php echo $tableName;?>/add">添加<?php echo $tableName;?></a>
 		  </td>
           </tr>
-          <tr>
-            <td height="20" colspan="3"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
-              <tr>
-                <td></td>
-              </tr>
-            </table></td>
+		  
+		  <tr>
+            <td height="20" colspan="3">
+                <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                  <tr>
+                    <td></td>
+                  </tr>
+                </table>
+            </td>
           </tr>
+		  
+		  <tr>
+		   <td colspan="2" width="100%"  class="left_txt">
+		   <table>
+		   <?php echo '<?php';?> $form = $this->beginWidget('CActiveForm'); <?php echo '?>';?>
+		   		<?php 
+		   			$i=1;
+					foreach ($fields as $n=>$v){ 	
+						if($i%5==0 || $i == 1){
+							echo '<tr>';
+						}
+						
+				?>
+					<td class="left_txt">
+							<?php echo '<?php';?> echo $options['<?php echo $n;?>'];<?php echo '?>';?>：<?php echo '<?php';?> echo $form->textField($model,'<?php echo $n;?>',array('value'=>$model-><?php echo $n;?>)); <?php echo '?>';?>
+	                </td>	
+				
+				<?php if($i%4 == 0){
+						echo '</tr>';
+						$i++;
+					}
+				?>	
+				<?php }?>	
+				<tr>
+					<td height="50" class="left_txt" colspan="4" align="center">
+					<input type="submit" value="点击查询" >
+					</td>
+				</tr>
+		     <?php echo '<?php';?> $this->endWidget(); <?php echo '?>';?>
+		   </table>
+		  </td>
+		  </tr>
+         
           
 		<tr  colspan="3">
 			<td colspan="3">
 		        <table  width="100%" >	
 					<tbody style="font-size:12px;">
 						<tr class="list_tbl">
-							<th height="30">ID</th>
-							<th><?php echo $options['name'];?></th>
-							<th><?php echo $options['tel'];?></th>
-							<th><?php echo $options['userName'];?></th>
-							<th><?php echo $options['loginName'];?></th>
-							<th><?php echo $options['userTel'];?></th>
-							<th><?php echo $options['qq'];?></th>
-                            <th>所属省市</th>
-							<th><?php echo $options['status'];?></th>
+						<?php 
+							foreach ($fields as $n=>$v){ 
+								echo '<th height="30">'.$v.'</th>';
+							}
+						?>
 							<th colspan="2" >操作</th>
 						</tr>
-
-						<?php
+						 <?php echo '<?php';?> 
 							foreach( $info as $n => $v){
 								$n = $n+1;
 								$flag = '';
@@ -79,15 +119,11 @@ function del(id){
 								}
 								echo '
 										<tr class="list_tbl" '.$flag.'>
-										<td class="link_bt"  valign="bottom">'.$v['id'].'</td>
-										<td class="link_bt"  valign="bottom">'.$v['name'].'</td>
-										<td class="link_bt" " valign="bottom">'.$v['tel'].'</td>
-										<td class="link_bt" " valign="bottom">'.$v['userName'].'</td>
-										<td class="link_bt"  valign="bottom">'.$v['loginName'].'</td>
-										<td class="link_bt"  valign="bottom">'.$v['userTel'].'</td>
-										<td class="link_bt"  valign="bottom">'.$v['qq'].'</td>
-										<td class="link_bt"  valign="bottom">'.$v['provinceName'].$v['cityName'].$v['districtName'].'</td>
-										<td class="link_bt"  valign="bottom">'.$status.'</td>
+										<?php 
+											foreach ($fields as $n=>$v){ 
+										?>
+										<td class="link_bt"  valign="bottom">'.$v['<?php echo $n;?>'].'</td>
+										<?php }?>
 										<td >
 										<span class="link_gn">
 										<a href="#" onClick="edit('.$v['id'].');">
@@ -97,19 +133,17 @@ function del(id){
 										</td>
 										
 										<td >
-										<!--
 										<span class="link_gn">
 										<a href="#" onClick="del('.$v['id'].');">
 										<img height="16"  border="0" height="16" src="/static/admin/images/del.gif" />
 										</a>
 										</span>
-										-->
 										</td>
 									</tr>
 								';
 							}
 						
-						?>
+						<?php echo '?>';?>
 						<tr>
 							<td height="14" colspan="9">
 							<table class="form_in" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -117,7 +151,7 @@ function del(id){
 							<tr>
 							<td bgcolor="#f6f8f9">
 							<br><br>	
-							<?php echo $page;?>	
+							<?php echo '<?php';?> echo $page;<?php echo '?>';?>
 							</td>
 							</tr>
 							</tbody>
@@ -137,9 +171,8 @@ function del(id){
   </tr>
   <tr>
     <td valign="middle" background="/static/admin/images/mail_leftbg.gif"><img src="/static/admin/images/buttom_left2.gif" width="17" height="17" /></td>
-      <td height="17" valign="top" background="/static/admin/images/buttom_bgs.gif"><img src="/static/admin/images/buttom_bgs.gif" width="17" height="17" /></td>
+    <td height="17" valign="top" background="/static/admin/images/buttom_bgs.gif"><img src="/static/admin/images/buttom_bgs.gif" width="17" height="17" /></td>
     <td background="/static/admin/images/mail_rightbg.gif"><img src="/static/admin/images/buttom_right2.gif" width="16" height="17" /></td>
   </tr>
 </table>
-</form>
 </body>
