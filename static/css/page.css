@@ -9,16 +9,22 @@
 
 
 /*feaute*/
-.feature{width: 100%;background: #f0f0f0;height: 118px;border-bottom: 2px solid #ededed;}
-.feature .container .item{width: 240px;float: left;font-size:24px;color: #666;position: relative;cursor: pointer;height: 118px;line-height: 118px;overflow: hidden;margin-right: 10px;}
-.feature li .hd{background: url(../images/feature_ico.png) no-repeat left center;padding-left: 100px; position: relative;height: 118px;}
-.feature li .bd{top:100%;position:relative;}
+.feature{width: 100%;height: 158px;background: url(../images/feature_bg.png) repeat-x;}
+.feature .container{padding-top: 29px;}
+.feature .container .item{width: 240px;float: left;font-size:20px;color: #666;position: relative;cursor: pointer;height: 100px;overflow: hidden;background: url(../images/feature_line.png) repeat-y right center;padding: 0 5px;}
+.feature li .hd{text-align: center;display: none-;}
 .feature .container > li.hover{background: #3aa2a2;color: #fff;}
-.feature li.item .bd{line-height: 18px;font-size:14px;clear: both;overflow: hidden;zoom:1;background:#3aa2a2;height: 90px;}
+.feature li.item .bd{line-height: 18px;font-size:14px;clear: both;overflow: hidden;zoom:1;background:#3aa2a2;height: 100px;width: 230px;margin: 0 auto;}
 .feature li.item .bd a{color: #fff;}
 .feature li.item .bd ul{position: relative;top: 50%;}
 .feature li.item .bd li{width: 50%;float: left;padding: 3px 0;text-align: center;}
-
+.feature .container > ul{background: url(../images/feature_line.png) repeat-y 0 29px;display: inline-block;width: 100%;}
+.feature .ico{display: block;width: 45px;height: 42px;margin: 0 auto 5px;}
+.feature .ico_policy{background-position: -50px -216px;}
+.feature .ico_money{background-position: -50px -168px;}
+.feature .ico_service{background-position: 0 -216px;}
+.feature .ico_incubator{background-position: 0 -168px;}
+.feature .hd p{font-size: 12px;color: #010101;margin-top: 5px;line-height: 24px;}
 
 
 /*news*/
@@ -40,11 +46,11 @@
 .sidebar .loginName{background: url(../images/admin.png) no-repeat 9px center}
 .sidebar .password{background: url(../images/password.png) no-repeat 9px center}
 .sidebar .remember{text-align: left;}
-.sidebar .remember a{float: right;}
+.sidebar .remember a{float: right;color:#e5503c;}
 .sidebar .login_btn{font-size: 14px;width:100%;height: 40px;line-height: 40px;border:0;color: #fff;background: #3aa2a2;margin-top: 20px;}
-.sidebar .no_id{margin-top:10px;}
+.sidebar .no_id{margin-top:10px;text-align: left;padding-left: 20px;}
 .sidebar .loginBy {border-top:1px solid #dfdfdf;overflow: hidden;}
-.sidebar .loginBy h5{margin: 28px 0;font:16px "Microsoft YaHei";}
+.sidebar .loginBy h5{margin: 25px 0;font:16px "Microsoft YaHei";}
 .sidebar .loginBy .list{clear: both;overflow: hidden;zoom:1;width: 100%;padding-left: 15px;}
 .sidebar .loginBy li{float: left;padding:0 0 10px 15px;}
 

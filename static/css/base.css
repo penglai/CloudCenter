@@ -41,7 +41,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 
 /*header*/
 
-.header{background-color:#39a2a5;height: 108px;line-height: 108px;font-size:16px;position: relative;z-index: 999;}
+.header{background-color:#39a2a5;height: 108px;font-size:16px;position: relative;z-index: 999;}
 .header_container{width: 1000px;height:108px;margin: 0 auto;background:url(../images/header_bg.jpg) no-repeat;position: relative;}
 .header .logo{display: block; width: 176px; height: 26px; position: absolute; left: 0; top: 42px; background-image: url(../images/logo.png);}
 .menu{ width:700px; height: 100px; position: absolute; left: 200px; top: 10px; font-family: "microsoft yahei"; background: url(../images/light.png) no-repeat -78px 0px; }
@@ -61,6 +61,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 /*subnav*/
 .header .nav_content{display: none;position: absolute;top: 108px;left:0px;width:1000px;height: 250px;overflow: hidden;}
 .header .nav_container{height: 250px;position: relative;width: 8000px;}
+.header .hotline{color: #fff;position: absolute;right: 0;top: 8px;text-shadow: 2px 2px 5px rgba(0,0,0,0.3)}
 .header .subnav{width: 1000px;background: #e8e9eb;font-size: 12px;color: #000;text-align: left;
 	background-image: -moz-linear-gradient(top, #e5e9ea, #ffffff);
 	background-image: -ms-linear-gradient(top, #e5e9ea, #ffffff);
@@ -80,21 +81,6 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .header .subnav .hot img{border:1px solid #cacccb;margin-bottom: 5px;}
 .header .subnav .hot p{line-height: 18px;}
 #mark { position:fixed; left:0; top: 0; z-index:998; width:100%; height:296%; *height:expression(document.body.clientHeight);background:#000; -moz-opacity: 0.65; filter:alpha(opacity=65); opacity: 0.65; }
-
-
-
-
-/*feaute*/
-.feature{width: 100%;background: #f0f0f0;height: 118px;border-bottom: 2px solid #ededed;}
-.feature .container .item{width: 240px;float: left;font-size:24px;color: #666;position: relative;cursor: pointer;height: 118px;line-height: 118px;overflow: hidden;margin-right: 10px;}
-.feature li .hd{background: url(../images/feature_ico.png) no-repeat left center;padding-left: 100px; position: relative;height: 118px;}
-.feature li .bd{top:100%;position:relative;}
-/*.feature .container > li .on{color: #dc281e;}*/
-.feature .container > li.hover{background: #3aa2a2;color: #fff;}
-.feature li.item .bd{line-height: 18px;font-size:14px;clear: both;overflow: hidden;zoom:1;background:#3aa2a2;height: 90px;}
-.feature li.item .bd a{color: #fff;}
-.feature li.item .bd ul{position: relative;top: 50%;}
-.feature li.item .bd li{width: 50%;float: left;padding: 3px 0;text-align: center;}
 
 
 /*common modle 公用模块化*/
@@ -117,7 +103,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .modle_con .tab li{cursor: pointer;}
 .modle_con .tab s{position: absolute;width:108px;height: 6px;left:0px;top: 26px;background: url(../images/arrow.png) no-repeat;}
 
-.modle_con .modle_list{padding-bottom: 20px;margin-top: 15px;clear:both;}
+.modle_con .modle_list{padding-bottom: 20px;margin-top: 15px;clear:both;padding-bottom: 50px;}
 .modle_con .modle_list li{overflow: hidden;zoom:1;border:1px solid #fff; border-bottom: 1px solid #dfdfdf;}
 .modle_con .modle_list li>a{display: block;border:6px solid #fff;height: 80px;background: #fff;padding: 6px;}
 .modle_con .modle_list li>a:hover{text-decoration: none;border:6px solid #f3f3f3;}
@@ -134,6 +120,11 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .sidebar{width: 275px;float: right;font-family: "宋体";}
 
 
+/*crumbs*/
+.crumbs{font-size: 16px;color: #666;margin-top:18px;border-bottom: 1px solid #dfdfdf;padding-bottom: 5px;}
+.crumbs li {float: left;background: url(../images/arrow_crumbs.png) no-repeat right center;height: 30px;line-height: 30px;padding:0 20px 0 10px;}
+.crumbs li.current a,.crumbs li a:hover{color: #dc281e;text-decoration: none;}
+.crumbs li.current{background: none;color:#dc281e;}
 
 /*cooperation*/
 .cooperation{width: 1000px;margin: 0 auto 30px;position: relative;padding:20px 0;}
@@ -148,7 +139,20 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .cooperation .Marquee_wrap{float: left;height: 60px;overflow: hidden;padding: 5px 0;margin: 0 18px;}
 .cooperation #next{background: url(../images/next.png) no-repeat;display: inline-block;width: 26px;height:46px;cursor: pointer; float: left;margin-top: 14px;}
 
+/*pagination*/
 
+.pagination {padding:3px;margin:3px;text-align: center;color: #39a2a5;font-size: 14px;margin-bottom: 50px;}
+.pagination a {border:1px solid #39a2a5;padding:5px 12px;color:#cccccc;margin-right: 6px;text-align: center;}
+.pagination a:hover {text-decoration: none; color: #39a2a5;}
+.pagination a:active {background: #39a2a5;color: #fff;}
+.pagination span.current { border:1px solid #39a2a5; padding:5px 12px;background: #39a2a5;margin-right: 6px;color: #fff;}
+.pagination span.disabled { border:1px solid #cccccc; padding:5px 12px; margin-right: 6px;color:#c5c5c5;}
+.pagination span.prev{background: url(../images/arrow_left.png) no-repeat 10px center;padding: 5px 12px 5px 20px;}
+.pagination a.next{background: url(../images/arrow_right.png) no-repeat 85% center;padding: 5px 20px 5px 12px;}
+/*.pagination a.next:hover{background: url(../images/arrow_right.png) #39a2a5 no-repeat 85% center;}*/
+
+
+.to_top{position: fixed;z-index:5;height: 50px;bottom: 100px;right:0px;display: -none;cursor: pointer;width: 50px;background-image: url(../images/to_top.png);}
 
 
 /*footer*/
@@ -158,10 +162,10 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .footer .social{position: relative;margin-left: 750px;}
 .footer .social p{color: #333;margin-top: 5px;font:14px "宋体";}
 .footer .site_map dl{float: left;padding:0 15px;}
-.footer .site_map dt{font-size: 16px;color: #666;margin-bottom: 10px; }
+.footer .site_map dt{font-size: 16px;color: #666;margin-bottom: 15px; }
 .footer .site_map dd{line-height: 20px;text-align: center;}
 .footer .copyright{text-align: center;padding-top:30px;margin-top: 40px;border-top:1px solid #c7d2dc;}
-.footer .copyright em{font-size: 14px;color: #01534d;}
+.footer .copyright em{font-size: 16px;color: #01534d;}
 .footer .copyright p{margin: 1em 0;}
 .footer .copyright a,.footer .copyright a:hover{color: #666;}
 

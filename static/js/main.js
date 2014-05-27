@@ -108,19 +108,19 @@ jQuery(".c_menu").mouseover();
  	
 
  	// feature animate
- 	$('.feature .container > li').hover(function(){
- 		$(this).find('.hd').stop(true,true).animate({'top': '100%'},600)
- 		$(this).find('.bd').stop(true,true).animate({'top':'-102px'},600)
- 	},function(){
- 		$(this).find('.bd').stop(true,true).animate({'top':'100%'},600)
- 		$(this).find('.hd').stop(true,true).animate({'top': '0'},600)
- 	})
 
  	$('.feature .bd ul').each(function(){
  		$(this).css('margin-top',-$(this).height()/2);
  	})
- 	
-
+ 	$(".feature .item").each(function(index) {
+ 		$(this).hover(function(){
+ 			$(this).find('.hd').hide();
+ 			$(this).find('.bd').show();
+ 		},function(){
+ 			$(this).find('.bd').hide();
+ 			$(this).find('.hd').show();
+ 		})
+	});
  	
  });
 
@@ -134,7 +134,6 @@ $(function(){
 				$index = $(this).index();
 				$(this).addClass('active').siblings().removeClass('active');
 				$(this).siblings('s').stop(true,true).animate({'left':parseInt($(this).position().left) + (parseInt($(this).css('margin-left')) + parseInt($(this).css('margin-right')) + parseInt($(this).outerWidth()))/ 2 - parseInt($('.modle_col .tab s').outerWidth())/ 2},300);
-				console.log($('s').css('left'));
 				content.eq($index).show().siblings().hide();
 			})
 		})
@@ -210,45 +209,29 @@ $(function(){
 	$('.menu li').mouseover(function () {
 		$('.nav_container').stop().animate({left:$(this).index() * (-1000)}, {duration:200});
 	});
+
+
+
+
+	// to top
+	$(window).scroll(function(){
+        if($(window).scrollTop()>120)
+        {
+            $('a.to_top').fadeIn();
+        }
+        else
+        {
+            $('a.to_top').fadeOut();
+        }
+    });
+    $('a.to_top').click(function(){
+        var $this = $(this);
+        $('html,body').animate({scrollTop:"0px"},function(){$this.fadeOut();});
+    });
+
 });
 
 // 
-$(function(){
-	/*$('#Marquee li img').each(function(){
-		$(this).css('margin-top',-$(this).height()/2)
-	})*/
-	/*********箭头控制滚动方向、加速及鼠标拖动***************/
 
-	/*********箭头控制滚动方向、加速及鼠标拖动***************/
-
-	var MarqueeControl=new Marquee("Marquee");      //箭头控制滚动方向、加速及鼠标拖动实例
-
-	MarqueeControl.Direction="left";
-
-	MarqueeControl.Step=1;
-
-	MarqueeControl.Width=910;
-
-	MarqueeControl.Height=60;
-
-	MarqueeControl.Timer=10;
-
-	MarqueeControl.ScrollStep=1;                //若为-1则禁止鼠标控制实例
-
-	MarqueeControl.Start();
-
-	MarqueeControl.BakStep=MarqueeControl.Step;
-
-	xg("prev").onmouseover=function(){MarqueeControl.Direction=2};
-
-	xg("prev").onmouseout=xg("prev").onmouseup=function(){MarqueeControl.Step=MarqueeControl.BakStep};
-
-	xg("prev").onmousedown=xg("next").onmousedown=function(){MarqueeControl.Step=MarqueeControl.BakStep+3};
-
-	xg("next").onmouseover=function(){MarqueeControl.Direction=3};
-
-	xg("next").onmouseout=xg("next").onmouseup=function(){MarqueeControl.Step=MarqueeControl.BakStep};
-
-})
 
 
