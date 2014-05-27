@@ -66,7 +66,7 @@
 .services .tab_content .s_item li:hover{border:1px solid #dfdfdf;}
 .services .s_item{float: left;width: 705px;margin-right: 20px;padding-bottom: 20px;margin-top: 15px;}
 
-.services .hot_list{height: 352px;border-bottom:0; border-top:0; margin-top:0;}
+.services .hot_list{height: 329px;border-bottom:0; border-top:0; margin-top:0;float: right;}
 
 
 /*park_overview*/
@@ -81,7 +81,22 @@
 .park_overview  .video_list{float: right;width: 275px;padding-top: 20px;}
 .park_overview  .video_list li{margin-bottom: 8px;}
 
+/*weibo_trends*/
+.weibo_trends{border:1px solid #dfdfdf;background: #fafafa;padding:25px 0;margin-top: 20px;}
+.weibo_trends h4{font-size: 18px; color: #000;margin-bottom: 20px;padding:0 25px;}
+.weibo_trends .attention{color: #000; background: #fff;border:1px solid #dfdfdf; text-align: center;padding:20px 0;margin: 0 25px;}
+.weibo_trends .link{padding: 0 10px;overflow: hidden;zoom:1; margin: 0 25px;}
+.weibo_trends .link a{display: inline-block;}
+.weibo_trends .link a span{display: inline-block;margin:0;position: relative;margin-right: 3px;}
+.weibo_trends .link .follow{background: #3aa2a2;color: #fff;padding:5px 10px; float: right;margin-top: 5px;}
+.weibo_trends  .list{border-top:1px solid #dfdfdf;color:#666;font: 12px "宋体";margin-top: 25px;}
+.weibo_trends  .list li{padding:0 36px;margin: 30px 0;line-height: 20px;}
+.weibo_trends li a{text-decoration: underline;}
 
+
+/* related*/
+.hot_list.related{width: auto;height: auto;border:0;padding: 0; background: #fff;border-top:1px solid #dfdfdf;padding-top: 40px;margin: 0 0 60px;}
+.hot_list.related h5{font-size: 14px;color: #000;margin-bottom: 10px;}
 
 #list_banner{width: 100%;min-width: 1000px;background: url(../images/list_banner.jpg) no-repeat center top; height: 232px;}
 

@@ -109,13 +109,18 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .modle_con .modle_list li>a{display: block;border:6px solid #fff;height: 80px;background: #fff;padding: 6px;}
 .modle_con .modle_list li>a:hover{text-decoration: none;border:6px solid #f3f3f3;}
 .modle_con .modle_list li:hover{/*background: #fff;*/border:1px solid #dfdfdf;}
-
+.modle_con .modle_info .title{padding:40px 0 20px;border-bottom: 1px solid #dfdfdf;}
+.modle_con .modle_info .sub_head{padding:0 20px;text-align: center;}
+.modle_con .modle_info h1{font-size: 28px; text-align: center;margin-bottom: 25px;}
+.modle_con .modle_info .text{padding:0 20px;margin-top: 25px;}
+.modle_con .modle_info .text p{text-indent: 2em;margin: 1em 0;font: 14px/24px "宋体";}
+.info .pagination{margin: 50px 0 50px;}
 /*hot_list*/
-.hot_list{float: right;width: 221px;padding: 26px 26px 0; border:1px solid #dfdfdf;background: #fafafa;margin-top: 20px;}
+.hot_list{width: 221px;padding: 25px; border:1px solid #dfdfdf;background: #fafafa;margin-top: 20px;}
 .hot_list .img_txt{padding: 10px; border:1px solid #c7d2dc;}
 .hot_list img{text-align: center;}
 .hot_list h4{height: 20px;line-height: 20px; background: #de533c; color: #fff;font-size: 14px; text-align: center;margin-bottom: 5px;}
-.hot_list li{background: url(../images/dot.jpg) no-repeat left center; padding-left: 10px; font:14px "宋体";padding:2px 0 2px 10px;line-height: 18px;}
+.hot_list li{background: url(../images/dot.jpg) no-repeat left center; padding-left: 10px; font:14px "宋体";padding:2px 0 2px 10px;line-height: 22px;}
 
 /*sidebar*/
 .sidebar{width: 275px;float: right;font-family: "宋体";}
@@ -123,7 +128,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 
 /*crumbs*/
 .crumbs{font-size: 16px;color: #666;margin-top:18px;border-bottom: 1px solid #dfdfdf;padding-bottom: 5px;}
-.crumbs li {float: left;background: url(../images/arrow_crumbs.png) no-repeat right center;height: 30px;line-height: 30px;padding:0 20px 0 10px;}
+.crumbs li {float: left; background: url(../images/arrow_crumbs.png) no-repeat right center; height: 30px;line-height: 30px;padding:0 20px 0 10px;}
 .crumbs li.current a,.crumbs li a:hover{color: #dc281e;text-decoration: none;}
 .crumbs li.current{background: none;color:#dc281e;}
 
