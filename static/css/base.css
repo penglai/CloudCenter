@@ -17,11 +17,11 @@ input, textarea{outline: none;}
 .tl{text-align: left;}
 .tr{text-align: right;}
 .tc{text-align: center;}
-body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
+body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative;}
 .ico,.focus_slide .btn a{background-image: url(../images/icons.png); background-repeat: no-repeat; display: inline-block;}
 
 /*site nav*/
-#site_nav{height: 30px;line-height: 30px;background: url(../images/site_nav.png) repeat-x;font-family: "宋体";}
+#site_nav{height: 30px;line-height: 30px;background: url(../images/site_nav.png) repeat-x;}
 .container{width: 1000px;margin: 0 auto;}
 .sn_container{position: relative;width: 1000px;margin: 0 auto;color: #666666;}
 #site_nav .login_info{float: left;margin-right: 10px;}
@@ -44,13 +44,13 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .header{background-color:#39a2a5;height: 108px;font-size:16px;position: relative;z-index: 999;}
 .header_container{width: 1000px;height:108px;margin: 0 auto;background:url(../images/header_bg.jpg) no-repeat;position: relative;}
 .header .logo{display: block; width: 176px; height: 26px; position: absolute; left: 0; top: 42px; background-image: url(../images/logo.png);}
-.menu{ width:700px; height: 100px; position: absolute; left: 200px; top: 10px; font-family: "microsoft yahei"; background: url(../images/light.png) no-repeat -78px 0px; }
+.menu{ width:700px; height: 100px; position: absolute; left: 200px; top: 10px;  background: url(../images/light.png) no-repeat -78px 0px; }
 .menu li{ float: left; width: 80px; height: 50px; text-align: center; padding: 26px 0 23px 0; line-height: 40px; font-weight: bold;}
 .menu li a{ color: white; padding: 5px; }
 .menu li a:hover{text-decoration: none;}
 .menu li.hover{ color: white !important;text-decoration: none;}
 .menu li:hover{background: url(../images/menu_li_bg_1.png) no-repeat center bottom; }
-.enter{ width: 100px; height: 16px; line-height: 16px; font-size: 12px; text-align: right; position: absolute; right: 0; top: 48px; color: #d2d2d2; font-family: "宋体"; }
+.enter{ width: 100px; height: 16px; line-height: 16px; font-size: 12px; text-align: right; position: absolute; right: 0; top: 48px; color: #d2d2d2;  }
 .enter a{ color: #d2d2d2; }
 .enter a:hover,.enter a.active{ color: white; }
 .enter a.active:hover{text-decoration: none;}
@@ -74,11 +74,11 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .header .subnav a{color: #000;padding: 0 5px;color: #666666;}
 .header .subnav a:hover{text-decoration: underline;}
 .header .subnav .list{padding:20px;clear: both;overflow: hidden;zoom:1;}
-.header .subnav dl{line-height: 30px;font-family: "宋体";width: 100px;padding-right:20px;float: left;font-weight: normal;}
-.header .subnav dt{font-size:16px;color:#ba0100;font-family: "Microsoft YaHei";}
+.header .subnav dl{line-height: 30px;width: 100px;padding-right:20px;float: left;font-weight: normal;}
+.header .subnav dt{font-size:16px;color:#ba0100;}
 .header .subnav dt a{color:#ba0100;padding: 0;}
 .header .subnav dd a{padding:0;}
-.header .subnav .hot{background:url(../images/subnav_line.png) repeat-y;width: 260px;float: left;padding-left: 40px;margin-left: 20px;font-family: "宋体";color:#666;font-weight: normal;}
+.header .subnav .hot{background:url(../images/subnav_line.png) repeat-y;width: 260px;float: left;padding-left: 40px;margin-left: 20px;color:#666;font-weight: normal;}
 .header .subnav .hot img{border:1px solid #cacccb;margin-bottom: 5px;}
 .header .subnav .hot p{line-height: 18px;}
 #mark { position:fixed; left:0; top: 0; z-index:998; width:100%; height:296%; *height:expression(document.body.clientHeight);background:#000; -moz-opacity: 0.65; filter:alpha(opacity=65); opacity: 0.65; }
@@ -97,8 +97,8 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .modle_col .hd .more:hover{text-decoration: underline;}
 
 .modle_con .bd .thumbnail{float: left;margin-right: 10px;}
-.modle_con .bd .info{font-family: "宋体";color:#666;padding-right: 30px;}
-.modle_con .bd h3{font-size: 18px;color: #000;font-family: "Microsoft YaHei";}
+.modle_con .bd .info{color:#666;padding-right: 30px;}
+.modle_con .bd h3{font-size: 18px;color: #000;}
 .modle_con .bd p{margin: 1em 0;color: #666;line-height: 18px;}
 .modle_con .tab{position: relative;}
 .modle_con .tab li{cursor: pointer;}
@@ -113,17 +113,17 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .modle_con .modle_info .sub_head{padding:0 20px;text-align: center;}
 .modle_con .modle_info h1{font-size: 28px; text-align: center;margin-bottom: 25px;}
 .modle_con .modle_info .text{padding:0 20px;margin-top: 25px;}
-.modle_con .modle_info .text p{text-indent: 2em;margin: 1em 0;font: 14px/24px "宋体";}
+.modle_con .modle_info .text p{text-indent: 2em;margin: 1em 0;font-size: 14px; line-height: 24px;}
 .info .pagination{margin: 50px 0 50px;}
 /*hot_list*/
 .hot_list{width: 221px;padding: 25px; border:1px solid #dfdfdf;background: #fafafa;margin-top: 20px;}
 .hot_list .img_txt{padding: 10px; border:1px solid #c7d2dc;}
 .hot_list img{text-align: center;}
 .hot_list h4{height: 20px;line-height: 20px; background: #de533c; color: #fff;font-size: 14px; text-align: center;margin-bottom: 5px;}
-.hot_list li{background: url(../images/dot.jpg) no-repeat left center; padding-left: 10px; font:14px "宋体";padding:2px 0 2px 10px;line-height: 22px;}
+.hot_list li{background: url(../images/dot.jpg) no-repeat left center; padding-left: 10px; font-size: 14px;padding:2px 0 2px 10px;line-height: 22px;}
 
 /*sidebar*/
-.sidebar{width: 275px;float: right;font-family: "宋体";}
+.sidebar{width: 275px;float: right;}
 
 
 /*crumbs*/
@@ -162,11 +162,11 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 
 
 /*footer*/
-.footer{background: #ededed url(../images/footer_bg.png) repeat-x left top;padding-bottom: 50px;font:12px "宋体";color:#666;padding-top: 20px;}
+.footer{background: #ededed url(../images/footer_bg.png) repeat-x left top;padding-bottom: 50px;font-size:12px;color:#666;padding-top: 20px;}
 .footer .container{clear: both;overflow: hidden;zoom:1;}
 .footer .site_map{border-right: 1px solid #c7d2dc; float: left;overflow: hidden;zoom:1;width: 700px;padding:15px 0;}
 .footer .social{position: relative;margin-left: 750px;}
-.footer .social p{color: #333;margin-top: 5px;font:14px "宋体";}
+.footer .social p{color: #333;margin-top: 5px;font-size: 14px;}
 .footer .site_map dl{float: left;padding:0 15px;}
 .footer .site_map dt{font-size: 16px;color: #666;margin-bottom: 15px; }
 .footer .site_map dd{line-height: 20px;}

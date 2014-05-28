@@ -11,7 +11,7 @@
 /*feaute*/
 .feature{width: 100%;height: 158px;background: url(../images/feature_bg.png) repeat-x;}
 .feature .container{padding-top: 29px;}
-.feature .container .item{width: 240px;float: left;font-size:20px;color: #666;position: relative;cursor: pointer;height: 100px;overflow: hidden;background: url(../images/feature_line.png) repeat-y right center;padding: 0 5px;}
+.feature .container .item{width: 240px;float: left;font-size:20px;color: #666;position: relative;height: 100px;overflow: hidden;background: url(../images/feature_line.png) repeat-y right center;padding: 0 5px;}
 .feature li .hd{text-align: center;display: none-;}
 .feature .container > li.hover{background: #3aa2a2;color: #fff;}
 .feature li.item .bd{line-height: 18px;font-size:14px;clear: both;overflow: hidden;zoom:1;background:#3aa2a2;height: 100px;width: 230px;margin: 0 auto;}
@@ -39,7 +39,7 @@
 
 /*sidebar*/
 .sidebar .login{ padding:20px 0;background: #fafafa;border:1px solid #dfdfdf;margin-top: 10px;height: 442px;}
-.sidebar .hd{ font:18px "Microsoft YaHei";color: #000; padding-left: 20px;}
+.sidebar .hd{ font-size:18px;color: #000; padding-left: 20px;}
 .sidebar .bd{text-align: center;}
 .sidebar .bd form{padding: 20px;}
 .sidebar .loginName,.sidebar .password{width: 194px;height: 38px;line-height: 38px;border:1px solid #dfdfdf;margin-bottom: 10px;padding-left: 32px;}
@@ -50,7 +50,7 @@
 .sidebar .login_btn{font-size: 14px;width:100%;height: 40px;line-height: 40px;border:0;color: #fff;background: #3aa2a2;margin-top: 20px;}
 .sidebar .no_id{margin-top:10px;text-align: left;padding-left: 20px;}
 .sidebar .loginBy {border-top:1px solid #dfdfdf;overflow: hidden;}
-.sidebar .loginBy h5{margin: 25px 0;font:16px "Microsoft YaHei";}
+.sidebar .loginBy h5{margin: 25px 0;font-size:16px;}
 .sidebar .loginBy .list{clear: both;overflow: hidden;zoom:1;width: 100%;padding-left: 15px;}
 .sidebar .loginBy li{float: left;padding:0 0 10px 15px;}
 
@@ -89,7 +89,7 @@
 .weibo_trends .link a{display: inline-block;}
 .weibo_trends .link a span{display: inline-block;margin:0;position: relative;margin-right: 3px;}
 .weibo_trends .link .follow{background: #3aa2a2;color: #fff;padding:5px 10px; float: right;margin-top: 5px;}
-.weibo_trends  .list{border-top:1px solid #dfdfdf;color:#666;font: 12px "宋体";margin-top: 25px;}
+.weibo_trends  .list{border-top:1px solid #dfdfdf;color:#666;font-size: 12px;margin-top: 25px;}
 .weibo_trends  .list li{padding:0 36px;margin: 30px 0;line-height: 20px;}
 .weibo_trends li a{text-decoration: underline;}
 
