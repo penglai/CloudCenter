@@ -74,10 +74,11 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 }
 .header .subnav a{color: #000;padding: 0 5px;color: #666666;}
 .header .subnav a:hover{text-decoration: underline;}
-.header .subnav .list{padding:20px 0;clear: both;overflow: hidden;zoom:1;}
-.header .subnav dl{line-height: 30px;font-family: "宋体";width: 120px;float: left;text-align: center;font-weight: normal;}
+.header .subnav .list{padding:20px;clear: both;overflow: hidden;zoom:1;}
+.header .subnav dl{line-height: 30px;font-family: "宋体";width: 100px;padding-right:20px;float: left;font-weight: normal;}
 .header .subnav dt{font-size:16px;color:#ba0100;font-family: "Microsoft YaHei";}
-.header .subnav dt a{color:#ba0100; }
+.header .subnav dt a{color:#ba0100;padding: 0;}
+.header .subnav dd a{padding:0;}
 .header .subnav .hot{background:url(../images/subnav_line.png) repeat-y;width: 260px;float: left;padding-left: 40px;margin-left: 20px;font-family: "宋体";color:#666;font-weight: normal;}
 .header .subnav .hot img{border:1px solid #cacccb;margin-bottom: 5px;}
 .header .subnav .hot p{line-height: 18px;}
@@ -169,7 +170,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .footer .social p{color: #333;margin-top: 5px;font:14px "宋体";}
 .footer .site_map dl{float: left;padding:0 15px;}
 .footer .site_map dt{font-size: 16px;color: #666;margin-bottom: 15px; }
-.footer .site_map dd{line-height: 20px;text-align: center;}
+.footer .site_map dd{line-height: 20px;}
 .footer .copyright{text-align: center;padding-top:30px;margin-top: 40px;border-top:1px solid #c7d2dc;}
 .footer .copyright em{font-size: 16px;color: #01534d;}
 .footer .copyright p{margin: 1em 0;}
