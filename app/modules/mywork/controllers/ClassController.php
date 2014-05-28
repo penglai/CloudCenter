@@ -1,35 +1,31 @@
-<?php echo '<?php'?>
- 
+<?php 
 /**
- * <?php echo $tableName;
- 
- ?>
- * @author bao
+ * 频道 * @author bao
  * 
  */;
 
 
-class <?php echo ucfirst($table);?>Controller extends Controller 
+class ClassController extends Controller 
 {
 	/**
 	 * 显示首页
 	 */
 	public function actionIndex() 
 	{
-		$data['name'] = "<?php echo $tableName;?>";
-		$model = new <?php echo ucfirst($table);?>Form();
+		$data['name'] = "频道";
+		$model = new ClassForm();
 		
-		$model->attributes = $_POST['<?php echo ucfirst($table);?>Form'];
+		$model->attributes = $_POST['ClassForm'];
 		$whereInfo = $this->getSearchInfo($model->attributes);
 		
-		$dataModel = new link<?php echo ucfirst($table);?>();
+		$dataModel = new linkClass();
 		$dataModel->initVar($dataModel);
 		$p = $_GET['page']?$_GET['page']:1;
 		$total = $dataModel->searchCountNum($whereInfo);
 		$limit = 20;
 		$from = ($p-1)*$limit;
 		$page_nums = 10;
-		$page = new sdkPage($total,$p,$limit,$page_nums,"/mywork/<?php echo $table;?>/index/page/");
+		$page = new sdkPage($total,$p,$limit,$page_nums,"/mywork/class/index/page/");
 		$data['page'] = $page->adminShow();
 		$whereInfo.= " order by id desc limit $from,$limit";
 		$data['info'] = $dataModel->search($whereInfo);
@@ -39,19 +35,18 @@ class <?php echo ucfirst($table);?>Controller extends Controller
 	}
 	
 	/**
-	 * 添加<?php echo $tableName;?>
-	 */
+	 * 添加频道	 */
 	public function actionAdd()
 	{
-		$model = new <?php echo ucfirst($table);?>Form();
-		if (isset($_POST['<?php echo ucfirst($table);?>Form'])) {
-			$model->attributes = $_POST['<?php echo ucfirst($table);?>Form'];
+		$model = new ClassForm();
+		if (isset($_POST['ClassForm'])) {
+			$model->attributes = $_POST['ClassForm'];
 			if($model->validate()){
-				$dataModel = new link<?php echo ucfirst($table);?>();
+				$dataModel = new linkClass();
 				$dataModel->initVar($dataModel);
 				$saveArray = $model->attributes;
 				$dataModel->save($saveArray);
-				$this->showmsg("操作成功",'/mywork/<?php echo $table;?>');
+				$this->showmsg("操作成功",'/mywork/class');
 			}
 		}
 		$data['model'] = $model;
@@ -60,27 +55,26 @@ class <?php echo ucfirst($table);?>Controller extends Controller
 	}
 	
 	/**
-	 *  编辑<?php echo $tableName;?>
-	 */
+	 *  编辑频道	 */
 	public function actionModify()
 	{
-		$dataModel = new link<?php echo ucfirst($table);?>();
+		$dataModel = new linkClass();
 		$dataModel->initVar($dataModel);
 		$dataModel->id = $_REQUEST['id'];
 		$dataInfo = $dataModel->search();
 		if (empty($dataInfo)) {
-			$this->showmsg("<?php echo $tableName;?>不存在！");
+			$this->showmsg("频道不存在！");
 		}
-		$model = new <?php echo ucfirst($table);?>Form();
-		if (isset($_POST['<?php echo ucfirst($table);?>Form'])) {
+		$model = new ClassForm();
+		if (isset($_POST['ClassForm'])) {
 			$model->id = $_REQUEST['id'];
-			$model->attributes = $_POST['<?php echo ucfirst($table);?>Form'];
+			$model->attributes = $_POST['ClassForm'];
 			if($model->validate()){
-				$dataModel = new link<?php echo ucfirst($table);?>();
+				$dataModel = new linkClass();
 				$dataModel->initVar($dataModel);
 				$saveArray = $model->attributes;
 				$dataModel->modify($saveArray);
-				$this->showmsg("操作成功",'/mywork/<?php echo $table;?>');
+				$this->showmsg("操作成功",'/mywork/class');
 			}
 		} else {
 			$dataInfo = $dataInfo[0];
@@ -96,22 +90,21 @@ class <?php echo ucfirst($table);?>Controller extends Controller
 	
 	
 	/**
-	 *  删除<?php echo $tableName;?>
-	 */
+	 *  删除频道	 */
 	public function actionDel()
 	{
-		$dataModel = new link<?php echo ucfirst($table);?>();
+		$dataModel = new linkClass();
 		$dataModel->initVar($dataModel);
 		$dataModel->id = $_REQUEST['id'];
 		$dataInfo = $dataModel->search();
 		if (empty($dataInfo)) {
-			$this->showmsg("<?php echo $tableName;?>不存在！");
+			$this->showmsg("频道不存在！");
 		}
 
 		$dataModel->initVar($dataModel);
 		$dataModel->id = $_REQUEST['id'];
 		$dataModel->delete();
-		$this->showmsg("操作成功",'/mywork/<?php echo $table;?>');
+		$this->showmsg("操作成功",'/mywork/class');
 	}
 	
 	/**

@@ -8,15 +8,14 @@ body {
 }
 </style>
 <script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
-<?php echo '<?php';?> $this->widget('application.widgets.common.notice');<?php echo '?>';?>
-<link href="/static/admin/css/skin.css" rel="stylesheet" type="text/css" />
+<?php $this->widget('application.widgets.common.notice');?><link href="/static/admin/css/skin.css" rel="stylesheet" type="text/css" />
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="17" height="29" valign="top" background="/static/admin/images/mail_leftbg.gif"><img src="/static/admin/images/left-top-right.gif" width="17" height="29" /></td>
     <td width="935" height="29" valign="top" background="/static/admin/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
       <tr>
-        <td height="31"><div class="titlebt"><?php echo '<?php';?> echo $options['formName'];<?php echo '?>';?></div></td>
+        <td height="31"><div class="titlebt"><?php echo $options['formName'];?></div></td>
       </tr>
     </table></td>
     <td width="16" valign="top" background="/static/admin/images/mail_rightbg.gif"><img src="/static/admin/images/nav-right-bg.gif" width="16" height="29" /></td>
@@ -30,10 +29,10 @@ body {
       <tr>
         <td valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="83%"  class="left_txt">当前位置：<?php echo '<?php';?> echo $options['formName'];<?php echo '?>';?></td>
+            <td width="83%"  class="left_txt">当前位置：<?php echo $options['formName'];?></td>
             
 			
-            <td align="right" width="60" class="left_txt"><a href="/mywork/cs/"><img src="/static/admin/images/back.gif"></a>&nbsp;&nbsp;<a href="/mywork/<?php echo $table;?>/">返回</a></td>
+            <td align="right" width="60" class="left_txt"><a href="/mywork/cs/"><img src="/static/admin/images/back.gif"></a>&nbsp;&nbsp;<a href="/mywork/special/">返回</a></td>
           </tr>
           <tr>
             <td height="20" colspan="3"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
@@ -47,33 +46,38 @@ body {
         
           <tr>
             <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<?php echo '<?php';?> $form = $this->beginWidget('CActiveForm');<?php echo '?>';?>
-              
-              <?php 
-              	$i = 1;
-				foreach ($fields as $n=>$v){ 		
-			 		$bg = '';
-			 		if($i%2 == 0 ){
-			 			$bg = 'bgcolor="#f2f2f2"';
-			 		}
-			 		$i++;
-			 		if ( $n != 'id' ) {	
-			  ?>
-              
+			<?php $form = $this->beginWidget('CActiveForm');?>              
+                            
               <tr>
-                <td <?php echo $bg; ?> width="20%" height="30" align="right" class="left_txt2"><?php echo '<?php';?> echo $options['<?php echo $n; ?>'];<?php echo '?>';?>：</td>
-                <td <?php echo $bg; ?> width="3%" >&nbsp;</td>
-                <td <?php echo $bg; ?> width="32%" height="30" >
-				<?php echo '<?php';?> echo $form->textField($model,'<?php echo $n; ?>',array('value'=>$model-><?php echo $n; ?>));<?php echo '?>';?>
-				</td>
-                <td <?php echo $bg; ?> width="45%" height="30" class="left_txt">
+                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['pic'];?>：</td>
+                <td bgcolor="#f2f2f2" width="3%" >&nbsp;</td>
+                <td bgcolor="#f2f2f2" width="32%" height="30" >
+				<?php echo $form->textField($model,'pic',array('value'=>$model->pic));?>				</td>
+                <td bgcolor="#f2f2f2" width="45%" height="30" class="left_txt">
 				<span style = "color:green">*</span>
-				<?php echo '<?php';?> echo $form->error($model,'<?php echo $n; ?>'); <?php echo '?>';?>
-				<?php echo '<?php';?> echo $options['<?php echo $n; ?>'];<?php echo '?>';?>
-				</td>
+				<?php echo $form->error($model,'pic'); ?>				<?php echo $options['pic'];?>				</td>
               </tr>
-              <?php }}?>
-            </table></td>
+                            
+              <tr>
+                <td  width="20%" height="30" align="right" class="left_txt2"><?php echo $options['link'];?>：</td>
+                <td  width="3%" >&nbsp;</td>
+                <td  width="32%" height="30" >
+				<?php echo $form->textField($model,'link',array('value'=>$model->link));?>				</td>
+                <td  width="45%" height="30" class="left_txt">
+				<span style = "color:green">*</span>
+				<?php echo $form->error($model,'link'); ?>				<?php echo $options['link'];?>				</td>
+              </tr>
+                            
+              <tr>
+                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['status'];?>：</td>
+                <td bgcolor="#f2f2f2" width="3%" >&nbsp;</td>
+                <td bgcolor="#f2f2f2" width="32%" height="30" >
+				<?php echo $form->textField($model,'status',array('value'=>$model->status));?>				</td>
+                <td bgcolor="#f2f2f2" width="45%" height="30" class="left_txt">
+				<span style = "color:green">*</span>
+				<?php echo $form->error($model,'status'); ?>				<?php echo $options['status'];?>				</td>
+              </tr>
+                          </table></td>
           </tr>
         </table>
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -99,5 +103,4 @@ body {
     <td background="/static/admin/images/mail_rightbg.gif"><img src="/static/admin/images/buttom_right2.gif" width="16" height="17" /></td>
   </tr>
 </table>
-<?php echo '<?php';?> $this->endWidget(); <?php echo '?>';?>
-</body>
+<?php $this->endWidget(); ?></body>

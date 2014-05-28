@@ -7,15 +7,14 @@ body {
 	background-color: #EEF2FB;
 }
 </style>
-<?php echo '<?php';?> $this->widget('application.widgets.common.adminList'); <?php echo '?>';?>
-<body >
+<?php $this->widget('application.widgets.common.adminList'); ?><body >
 <script>
 	function edit(id){
-		window.location.href="/mywork/<?php echo $table;?>/modify/id/"+id;
+		window.location.href="/mywork/admin/modify/id/"+id;
 	}
 	function del(id){
 		if (confirm("温馨提示：确定删除？")){
-			window.location.href="/mywork/<?php echo $table;?>/del/id/"+id;
+			window.location.href="/mywork/admin/del/id/"+id;
 		}
 	}
 </script>
@@ -24,7 +23,7 @@ body {
     <td width="17" height="29" valign="top" background="/static/admin/images/mail_leftbg.gif"><img src="/static/admin/images/left-top-right.gif" width="17" height="29" /></td>
     <td width="935" height="29" valign="top" background="/static/admin/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
       <tr>
-        <td height="31"><div class="titlebt"><?php echo '<?php';?> echo $name;<?php echo '?>';?></div></td>
+        <td height="31"><div class="titlebt"><?php echo $name;?></div></td>
       </tr>
     </table></td>
     <td width="16" valign="top" background="/static/admin/images/mail_rightbg.gif"><img src="/static/admin/images/nav-right-bg.gif" width="16" height="29" /></td>
@@ -38,13 +37,12 @@ body {
       <tr>
         <td valign="top"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="83%"  class="left_txt">当前位置：<?php echo '<?php';?> echo $name;列表<?php echo '?>';?>
-				&nbsp;&nbsp;&nbsp;&nbsp;
+            <td width="83%"  class="left_txt">当前位置：<?php echo $name;列表?>				&nbsp;&nbsp;&nbsp;&nbsp;
 				
 			</td>
           <td align="right" width="60" class="left_txt">
-			  <a href="/mywork/<?php echo $table;?>/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
-			  <a href="/mywork/<?php echo $table;?>/add">添加<?php echo $tableName;?></a>
+			  <a href="/mywork/admin/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
+			  <a href="/mywork/admin/add">添加管理员</a>
 		  </td>
           </tr>
 		  
@@ -61,32 +59,41 @@ body {
 		  <tr>
 		   <td colspan="2" width="100%"  class="left_txt">
 		   <table>
-		   <?php echo '<?php';?> $form = $this->beginWidget('CActiveForm'); <?php echo '?>';?>
-		   		<?php 
-		   			$i=1;
-					foreach ($fields as $n=>$v){ 	
-						if($i%5==0 || $i == 1){
-							echo '<tr>';
-						}
-						
-				?>
-					<td class="left_txt">
-							<?php echo '<?php';?> echo $options['<?php echo $n;?>'];<?php echo '?>';?>：<?php echo '<?php';?> echo $form->textField($model,'<?php echo $n;?>',array('value'=>$model-><?php echo $n;?>)); <?php echo '?>';?>
-	                </td>	
+		   <?php $form = $this->beginWidget('CActiveForm'); ?>		   		<tr>					<td class="left_txt">
+							<?php echo $options['id'];?>：<?php echo $form->textField($model,'id',array('value'=>$model->id)); ?>	                </td>	
 				
-				<?php if($i%4 == 0){
-						echo '</tr>';
-					}
-					$i++;
-				?>	
-				<?php }?>	
+					
+									<td class="left_txt">
+							<?php echo $options['userName'];?>：<?php echo $form->textField($model,'userName',array('value'=>$model->userName)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['password'];?>：<?php echo $form->textField($model,'password',array('value'=>$model->password)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['realName'];?>：<?php echo $form->textField($model,'realName',array('value'=>$model->realName)); ?>	                </td>	
+				
+				</tr>	
+				<tr>					<td class="left_txt">
+							<?php echo $options['telephone'];?>：<?php echo $form->textField($model,'telephone',array('value'=>$model->telephone)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['loginDate'];?>：<?php echo $form->textField($model,'loginDate',array('value'=>$model->loginDate)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['loginIp'];?>：<?php echo $form->textField($model,'loginIp',array('value'=>$model->loginIp)); ?>	                </td>	
+				
+					
+					
 				<tr>
 					<td height="50" class="left_txt" colspan="4" align="center">
 					<input type="submit" value="点击查询" >
 					</td>
 				</tr>
-		     <?php echo '<?php';?> $this->endWidget(); <?php echo '?>';?>
-		   </table>
+		     <?php $this->endWidget(); ?>		   </table>
 		  </td>
 		  </tr>
          
@@ -96,14 +103,9 @@ body {
 		        <table  width="100%" >	
 					<tbody style="font-size:12px;">
 						<tr class="list_tbl">
-						<?php 
-							foreach ($fields as $n=>$v){ 
-								echo '<th height="30">'.$v.'</th>';
-							}
-						?>
-							<th colspan="2" >操作</th>
+						<th height="30">用户ID</th><th height="30">登录名</th><th height="30">密码</th><th height="30">真实姓名</th><th height="30">电话</th><th height="30">登陆时间</th><th height="30">登陆IP</th>							<th colspan="2" >操作</th>
 						</tr>
-						 <?php echo '<?php';?> 
+						 <?php 
 							foreach( $info as $n => $v){
 								$n = $n+1;
 								$flag = '';
@@ -119,12 +121,14 @@ body {
 								}
 								echo '
 										<tr class="list_tbl" '.$flag.'>
-										<?php 
-											foreach ($fields as $n=>$v){ 
-										?>
-										<td class="link_bt"  valign="bottom">'.$v['<?php echo $n;?>'].'</td>
-										<?php }?>
-										<td >
+																				<td class="link_bt"  valign="bottom">'.$v['id'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['userName'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['password'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['realName'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['telephone'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['loginDate'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['loginIp'].'</td>
+																				<td >
 										<span class="link_gn">
 										<a href="#" onClick="edit('.$v['id'].');">
 										<img height="16"  border="0" height="16" src="/static/admin/images/edit.gif" />
@@ -143,16 +147,14 @@ body {
 								';
 							}
 						
-						<?php echo '?>';?>
-						<tr>
+						?>						<tr>
 							<td height="14" colspan="9">
 							<table class="form_in" cellspacing="0" cellpadding="0" border="0" width="100%">
 							<tbody>
 							<tr>
 							<td bgcolor="#f6f8f9">
 							<br><br>	
-							<?php echo '<?php';?> echo $page;<?php echo '?>';?>
-							</td>
+							<?php echo $page;?>							</td>
 							</tr>
 							</tbody>
 							</table>

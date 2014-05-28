@@ -98,7 +98,7 @@ mainTable.tBodies[n].style.display="block";
                           </TR>
                           <TR>
                             <TD width="4%" height="28" background="/static/admin/images/news-title-bg.gif"></TD>
-                            <TD height="25" colspan="2" background="/static/admin/images/news-title-bg.gif" class="left_txt">亲爱的<?php echo $info['realName'];?>： 欢迎登录！</TD>
+                            <TD height="25" colspan="2" background="/static/admin/images/news-title-bg.gif" class="left_txt">亲爱的<?php echo $userInfo['realName'];?>： 欢迎登录！</TD>
                           </TR>
 						  <!--
                           <TR>

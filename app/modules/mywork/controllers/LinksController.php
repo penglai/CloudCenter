@@ -1,35 +1,31 @@
-<?php echo '<?php'?>
- 
+<?php 
 /**
- * <?php echo $tableName;
- 
- ?>
- * @author bao
+ * 友情链接 * @author bao
  * 
  */;
 
 
-class <?php echo ucfirst($table);?>Controller extends Controller 
+class LinksController extends Controller 
 {
 	/**
 	 * 显示首页
 	 */
 	public function actionIndex() 
 	{
-		$data['name'] = "<?php echo $tableName;?>";
-		$model = new <?php echo ucfirst($table);?>Form();
+		$data['name'] = "友情链接";
+		$model = new LinksForm();
 		
-		$model->attributes = $_POST['<?php echo ucfirst($table);?>Form'];
+		$model->attributes = $_POST['LinksForm'];
 		$whereInfo = $this->getSearchInfo($model->attributes);
 		
-		$dataModel = new link<?php echo ucfirst($table);?>();
+		$dataModel = new linkLinks();
 		$dataModel->initVar($dataModel);
 		$p = $_GET['page']?$_GET['page']:1;
 		$total = $dataModel->searchCountNum($whereInfo);
 		$limit = 20;
 		$from = ($p-1)*$limit;
 		$page_nums = 10;
-		$page = new sdkPage($total,$p,$limit,$page_nums,"/mywork/<?php echo $table;?>/index/page/");
+		$page = new sdkPage($total,$p,$limit,$page_nums,"/mywork/links/index/page/");
 		$data['page'] = $page->adminShow();
 		$whereInfo.= " order by id desc limit $from,$limit";
 		$data['info'] = $dataModel->search($whereInfo);
@@ -39,19 +35,18 @@ class <?php echo ucfirst($table);?>Controller extends Controller
 	}
 	
 	/**
-	 * 添加<?php echo $tableName;?>
-	 */
+	 * 添加友情链接	 */
 	public function actionAdd()
 	{
-		$model = new <?php echo ucfirst($table);?>Form();
-		if (isset($_POST['<?php echo ucfirst($table);?>Form'])) {
-			$model->attributes = $_POST['<?php echo ucfirst($table);?>Form'];
+		$model = new LinksForm();
+		if (isset($_POST['LinksForm'])) {
+			$model->attributes = $_POST['LinksForm'];
 			if($model->validate()){
-				$dataModel = new link<?php echo ucfirst($table);?>();
+				$dataModel = new linkLinks();
 				$dataModel->initVar($dataModel);
 				$saveArray = $model->attributes;
 				$dataModel->save($saveArray);
-				$this->showmsg("操作成功",'/mywork/<?php echo $table;?>');
+				$this->showmsg("操作成功",'/mywork/links');
 			}
 		}
 		$data['model'] = $model;
@@ -60,27 +55,26 @@ class <?php echo ucfirst($table);?>Controller extends Controller
 	}
 	
 	/**
-	 *  编辑<?php echo $tableName;?>
-	 */
+	 *  编辑友情链接	 */
 	public function actionModify()
 	{
-		$dataModel = new link<?php echo ucfirst($table);?>();
+		$dataModel = new linkLinks();
 		$dataModel->initVar($dataModel);
 		$dataModel->id = $_REQUEST['id'];
 		$dataInfo = $dataModel->search();
 		if (empty($dataInfo)) {
-			$this->showmsg("<?php echo $tableName;?>不存在！");
+			$this->showmsg("友情链接不存在！");
 		}
-		$model = new <?php echo ucfirst($table);?>Form();
-		if (isset($_POST['<?php echo ucfirst($table);?>Form'])) {
+		$model = new LinksForm();
+		if (isset($_POST['LinksForm'])) {
 			$model->id = $_REQUEST['id'];
-			$model->attributes = $_POST['<?php echo ucfirst($table);?>Form'];
+			$model->attributes = $_POST['LinksForm'];
 			if($model->validate()){
-				$dataModel = new link<?php echo ucfirst($table);?>();
+				$dataModel = new linkLinks();
 				$dataModel->initVar($dataModel);
 				$saveArray = $model->attributes;
 				$dataModel->modify($saveArray);
-				$this->showmsg("操作成功",'/mywork/<?php echo $table;?>');
+				$this->showmsg("操作成功",'/mywork/links');
 			}
 		} else {
 			$dataInfo = $dataInfo[0];
@@ -96,22 +90,21 @@ class <?php echo ucfirst($table);?>Controller extends Controller
 	
 	
 	/**
-	 *  删除<?php echo $tableName;?>
-	 */
+	 *  删除友情链接	 */
 	public function actionDel()
 	{
-		$dataModel = new link<?php echo ucfirst($table);?>();
+		$dataModel = new linkLinks();
 		$dataModel->initVar($dataModel);
 		$dataModel->id = $_REQUEST['id'];
 		$dataInfo = $dataModel->search();
 		if (empty($dataInfo)) {
-			$this->showmsg("<?php echo $tableName;?>不存在！");
+			$this->showmsg("友情链接不存在！");
 		}
 
 		$dataModel->initVar($dataModel);
 		$dataModel->id = $_REQUEST['id'];
 		$dataModel->delete();
-		$this->showmsg("操作成功",'/mywork/<?php echo $table;?>');
+		$this->showmsg("操作成功",'/mywork/links');
 	}
 	
 	/**
