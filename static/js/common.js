@@ -98,10 +98,13 @@ $(function(){
         if($(window).scrollTop()>120)
         {
             $('a.to_top').fadeIn();
+			$('#hotline').fadeIn();
+			
         }
         else
         {
             $('a.to_top').fadeOut();
+			$('#hotline').fadeOut();
         }
     });
     $('a.to_top').click(function(){
