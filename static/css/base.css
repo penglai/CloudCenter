@@ -49,8 +49,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .menu li a{ color: white; padding: 5px; }
 .menu li a:hover{text-decoration: none;}
 .menu li.hover{ color: white !important;text-decoration: none;}
-.menu li:hover{background: url(http://static.bbs.miui.com/static/index/images/menu_li_bg_1.png) no-repeat center bottom; }
-.menu li.lihover{ background: url(../images/light.png) no-repeat center bottom; }
+.menu li:hover{background: url(../images/menu_li_bg_1.png) no-repeat center bottom; }
 .enter{ width: 100px; height: 16px; line-height: 16px; font-size: 12px; text-align: right; position: absolute; right: 0; top: 48px; color: #d2d2d2; font-family: "宋体"; }
 .enter a{ color: #d2d2d2; }
 .enter a:hover,.enter a.active{ color: white; }
@@ -63,7 +62,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .header .nav_content{display: none;position: absolute;top: 108px;left:0px;width:1000px;height: 250px;overflow: hidden;}
 .header .nav_container{height: 250px;position: relative;width: 8000px;}
 .header .hotline{color: #fff;position: absolute;right: 0;top: 8px;text-shadow: 2px 2px 5px rgba(0,0,0,0.3)}
-.header .subnav{width: 1000px;background: #e8e9eb;font-size: 12px;color: #000;text-align: left;
+.header .subnav{width: 1000px;height:250px;overflow:hidden;background: #e8e9eb;font-size: 12px;color: #000;text-align: left;
 	background-image: -moz-linear-gradient(top, #e5e9ea, #ffffff);
 	background-image: -ms-linear-gradient(top, #e5e9ea, #ffffff);
 	background-image: -o-linear-gradient(top, #e5e9ea, #ffffff);
@@ -177,7 +176,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei";position: relative;}
 .footer .copyright a,.footer .copyright a:hover{color: #666;}
 
 
-
+#hotline{position: fixed; right: 0;top: 50%;margin-top: -93px;width: 148px;height: 186px;z-index: 99;}
 
 
 

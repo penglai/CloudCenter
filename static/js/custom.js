@@ -7,7 +7,7 @@
 $(function(){
 	// add banner img
 	$('.focus_box li').each(function(){
-		$(this).css({'background-image':'url(' + $(this).find('img').attr('data-src') + ')' })
+		$(this).css({'background-image':'url(' + $(this).find('a').attr('data-src') + ')' })
 	});
 
 	// banner slide

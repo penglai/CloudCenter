@@ -48,7 +48,7 @@ jQuery(".c_menu").mouseover();
 
 // sub nav  animate
 $(function(){
-	var aLi=$(".header .menu");
+	var aLi=$(".header .menu li");
 	var oMenu=$(".header .nav_content");
 	var obox_menu=$(".header .nav_container");
 	var timer=null;
@@ -91,8 +91,6 @@ $(function(){
 	$('.menu li').mouseover(function () {
 		$('.nav_container').stop().animate({left:$(this).index() * (-1000)}, {duration:200});
 	});
-
-
 
 
 	// to top
