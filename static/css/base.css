@@ -49,7 +49,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative;}
 .menu li a{ color: white; padding: 5px; }
 .menu li a:hover{text-decoration: none;}
 .menu li.hover{ color: white !important;text-decoration: none;}
-.menu li:hover{background: url(../images/menu_li_bg_1.png) no-repeat center bottom; }
+.menu li:hover,.menu li.on{background: url(../images/menu_li_bg_1.png) no-repeat center bottom; }
 .enter{ width: 100px; height: 16px; line-height: 16px; font-size: 12px; text-align: right; position: absolute; right: 0; top: 48px; color: #d2d2d2;  }
 .enter a{ color: #d2d2d2; }
 .enter a:hover,.enter a.active{ color: white; }

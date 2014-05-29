@@ -22,9 +22,31 @@ jQuery(".menu li").hover(function() {
         backgroundPosition: menuleft + "px" + " 0"
     },
     100 * len);
+    $(this).removeClass('on');
+    _index =  $(this).index();
+
+    if($('.nav_container').is(':visible'))
+    {
+        $(this).addClass('on').siblings().removeClass('on');
+    
+    }
+
 },
 function() {
+    $(this).removeClass('on');
 });
+
+$(function(){
+    $('.nav_container').mouseover(function(){
+
+        $('.menu li').eq(_index).addClass('on').siblings().removeClass('on');
+    })
+    $('.nav_container').mouseout(function(){
+
+        $('.menu li').removeClass('on');
+    })
+   
+})
 
 jQuery(".menu").mouseleave(function() {
     var num = jQuery(".menu li").index(jQuery(".hover"));
@@ -45,6 +67,7 @@ jQuery(".menu").mouseleave(function() {
     100 * len);
 });
 jQuery(".c_menu").mouseover(); 
+
 
 // sub nav  animate
 $(function(){
