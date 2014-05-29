@@ -10,11 +10,11 @@ body {
 <?php $this->widget('application.widgets.common.adminList'); ?><body >
 <script>
 	function edit(id){
-		window.location.href="/mywork/content/modify/id/"+id;
+		window.location.href="/mywork/menu/modify/id/"+id;
 	}
 	function del(id){
 		if (confirm("温馨提示：确定删除？")){
-			window.location.href="/mywork/content/del/id/"+id;
+			window.location.href="/mywork/menu/del/id/"+id;
 		}
 	}
 </script>
@@ -41,8 +41,8 @@ body {
 				
 			</td>
           <td align="right" width="60" class="left_txt">
-			  <a href="/mywork/content/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
-			  <a href="/mywork/content/add">添加文章</a>
+			  <a href="/mywork/menu/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
+			  <a href="/mywork/menu/add">添加菜单</a>
 		  </td>
           </tr>
 		  
@@ -64,33 +64,29 @@ body {
 				
 					
 									<td class="left_txt">
-							<?php echo $options['menuId'];?>：<?php echo $form->textField($model,'menuId',array('value'=>$model->menuId)); ?>	                </td>	
+							<?php echo $options['name'];?>：<?php echo $form->textField($model,'name',array('value'=>$model->name)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
-							<?php echo $options['title'];?>：<?php echo $form->textField($model,'title',array('value'=>$model->title)); ?>	                </td>	
+							<?php echo $options['type'];?>：<?php echo $form->textField($model,'type',array('value'=>$model->type)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
-							<?php echo $options['useId'];?>：<?php echo $form->textField($model,'useId',array('value'=>$model->useId)); ?>	                </td>	
+							<?php echo $options['showOrder'];?>：<?php echo $form->textField($model,'showOrder',array('value'=>$model->showOrder)); ?>	                </td>	
 				
 				</tr>	
 				<tr>					<td class="left_txt">
-							<?php echo $options['titlePic'];?>：<?php echo $form->textField($model,'titlePic',array('value'=>$model->titlePic)); ?>	                </td>	
+							<?php echo $options['userId'];?>：<?php echo $form->textField($model,'userId',array('value'=>$model->userId)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
-							<?php echo $options['cdate'];?>：<?php echo $form->textField($model,'cdate',array('value'=>$model->cdate)); ?>	                </td>	
+							<?php echo $options['logo'];?>：<?php echo $form->textField($model,'logo',array('value'=>$model->logo)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
-							<?php echo $options['content'];?>：<?php echo $form->textField($model,'content',array('value'=>$model->content)); ?>	                </td>	
+							<?php echo $options['logoId'];?>：<?php echo $form->textField($model,'logoId',array('value'=>$model->logoId)); ?>	                </td>	
 				
 					
-									<td class="left_txt">
-							<?php echo $options['status'];?>：<?php echo $form->textField($model,'status',array('value'=>$model->status)); ?>	                </td>	
-				
-				</tr>	
 					
 				<tr>
 					<td height="50" class="left_txt" colspan="4" align="center">
@@ -107,7 +103,7 @@ body {
 		        <table  width="100%" >	
 					<tbody style="font-size:12px;">
 						<tr class="list_tbl">
-						<th height="30">文章ID</th><th height="30">文章分类</th><th height="30">文章标题</th><th height="30">用户ID</th><th height="30">文章图片</th><th height="30">创建时间</th><th height="30">文章内容</th><th height="30">状态：-1隐藏 1显示</th>							<th colspan="2" >操作</th>
+						<th height="30">菜单ID</th><th height="30">菜单名称</th><th height="30">-1 商品相册 -2 留言板 1关联普通新闻</th><th height="30">显示顺序</th><th height="30">用户ID</th><th height="30">菜单图标</th><th height="30">系统图标</th>							<th colspan="2" >操作</th>
 						</tr>
 						 <?php 
 							foreach( $info as $n => $v){
@@ -126,13 +122,12 @@ body {
 								echo '
 										<tr class="list_tbl" '.$flag.'>
 																				<td class="link_bt"  valign="bottom">'.$v['id'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['menuId'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['title'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['useId'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['titlePic'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['cdate'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['content'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['status'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['name'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['type'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['showOrder'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['userId'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['logo'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['logoId'].'</td>
 																				<td >
 										<span class="link_gn">
 										<a href="#" onClick="edit('.$v['id'].');">

@@ -32,7 +32,7 @@ body {
             <td width="83%"  class="left_txt">当前位置：<?php echo $options['formName'];?></td>
             
 			
-            <td align="right" width="60" class="left_txt"><a href="/mywork/cs/"><img src="/static/admin/images/back.gif"></a>&nbsp;&nbsp;<a href="/mywork/content/">返回</a></td>
+            <td align="right" width="60" class="left_txt"><a href="/mywork/cs/"><img src="/static/admin/images/back.gif"></a>&nbsp;&nbsp;<a href="/mywork/district/">返回</a></td>
           </tr>
           <tr>
             <td height="20" colspan="3"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
@@ -49,73 +49,33 @@ body {
 			<?php $form = $this->beginWidget('CActiveForm');?>              
                             
               <tr>
-                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['menuId'];?>：</td>
+                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['name'];?>：</td>
                 <td bgcolor="#f2f2f2" width="3%" >&nbsp;</td>
                 <td bgcolor="#f2f2f2" width="32%" height="30" >
-				<?php echo $form->textField($model,'menuId',array('value'=>$model->menuId));?>				</td>
+				<?php echo $form->textField($model,'name',array('value'=>$model->name));?>				</td>
                 <td bgcolor="#f2f2f2" width="45%" height="30" class="left_txt">
 				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'menuId'); ?>				<?php echo $options['menuId'];?>				</td>
+				<?php echo $form->error($model,'name'); ?>				<?php echo $options['name'];?>				</td>
               </tr>
                             
               <tr>
-                <td  width="20%" height="30" align="right" class="left_txt2"><?php echo $options['title'];?>：</td>
+                <td  width="20%" height="30" align="right" class="left_txt2"><?php echo $options['cityId'];?>：</td>
                 <td  width="3%" >&nbsp;</td>
                 <td  width="32%" height="30" >
-				<?php echo $form->textField($model,'title',array('value'=>$model->title));?>				</td>
+				<?php echo $form->textField($model,'cityId',array('value'=>$model->cityId));?>				</td>
                 <td  width="45%" height="30" class="left_txt">
 				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'title'); ?>				<?php echo $options['title'];?>				</td>
+				<?php echo $form->error($model,'cityId'); ?>				<?php echo $options['cityId'];?>				</td>
               </tr>
                             
               <tr>
-                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['useId'];?>：</td>
+                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['showOrder'];?>：</td>
                 <td bgcolor="#f2f2f2" width="3%" >&nbsp;</td>
                 <td bgcolor="#f2f2f2" width="32%" height="30" >
-				<?php echo $form->textField($model,'useId',array('value'=>$model->useId));?>				</td>
+				<?php echo $form->textField($model,'showOrder',array('value'=>$model->showOrder));?>				</td>
                 <td bgcolor="#f2f2f2" width="45%" height="30" class="left_txt">
 				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'useId'); ?>				<?php echo $options['useId'];?>				</td>
-              </tr>
-                            
-              <tr>
-                <td  width="20%" height="30" align="right" class="left_txt2"><?php echo $options['titlePic'];?>：</td>
-                <td  width="3%" >&nbsp;</td>
-                <td  width="32%" height="30" >
-				<?php echo $form->textField($model,'titlePic',array('value'=>$model->titlePic));?>				</td>
-                <td  width="45%" height="30" class="left_txt">
-				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'titlePic'); ?>				<?php echo $options['titlePic'];?>				</td>
-              </tr>
-                            
-              <tr>
-                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['cdate'];?>：</td>
-                <td bgcolor="#f2f2f2" width="3%" >&nbsp;</td>
-                <td bgcolor="#f2f2f2" width="32%" height="30" >
-				<?php echo $form->textField($model,'cdate',array('value'=>$model->cdate));?>				</td>
-                <td bgcolor="#f2f2f2" width="45%" height="30" class="left_txt">
-				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'cdate'); ?>				<?php echo $options['cdate'];?>				</td>
-              </tr>
-                            
-              <tr>
-                <td  width="20%" height="30" align="right" class="left_txt2"><?php echo $options['content'];?>：</td>
-                <td  width="3%" >&nbsp;</td>
-                <td  width="32%" height="30" >
-				<?php echo $form->textField($model,'content',array('value'=>$model->content));?>				</td>
-                <td  width="45%" height="30" class="left_txt">
-				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'content'); ?>				<?php echo $options['content'];?>				</td>
-              </tr>
-                            
-              <tr>
-                <td bgcolor="#f2f2f2" width="20%" height="30" align="right" class="left_txt2"><?php echo $options['status'];?>：</td>
-                <td bgcolor="#f2f2f2" width="3%" >&nbsp;</td>
-                <td bgcolor="#f2f2f2" width="32%" height="30" >
-				<?php echo $form->textField($model,'status',array('value'=>$model->status));?>				</td>
-                <td bgcolor="#f2f2f2" width="45%" height="30" class="left_txt">
-				<span style = "color:green">*</span>
-				<?php echo $form->error($model,'status'); ?>				<?php echo $options['status'];?>				</td>
+				<?php echo $form->error($model,'showOrder'); ?>				<?php echo $options['showOrder'];?>				</td>
               </tr>
                           </table></td>
           </tr>

@@ -10,11 +10,11 @@ body {
 <?php $this->widget('application.widgets.common.adminList'); ?><body >
 <script>
 	function edit(id){
-		window.location.href="/mywork/content/modify/id/"+id;
+		window.location.href="/mywork/user/modify/id/"+id;
 	}
 	function del(id){
 		if (confirm("温馨提示：确定删除？")){
-			window.location.href="/mywork/content/del/id/"+id;
+			window.location.href="/mywork/user/del/id/"+id;
 		}
 	}
 </script>
@@ -41,8 +41,8 @@ body {
 				
 			</td>
           <td align="right" width="60" class="left_txt">
-			  <a href="/mywork/content/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
-			  <a href="/mywork/content/add">添加文章</a>
+			  <a href="/mywork/user/add"><img src="/static/admin/images/add.gif"></a>&nbsp;&nbsp;
+			  <a href="/mywork/user/add">添加用户</a>
 		  </td>
           </tr>
 		  
@@ -64,33 +64,73 @@ body {
 				
 					
 									<td class="left_txt">
-							<?php echo $options['menuId'];?>：<?php echo $form->textField($model,'menuId',array('value'=>$model->menuId)); ?>	                </td>	
+							<?php echo $options['loginName'];?>：<?php echo $form->textField($model,'loginName',array('value'=>$model->loginName)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
-							<?php echo $options['title'];?>：<?php echo $form->textField($model,'title',array('value'=>$model->title)); ?>	                </td>	
+							<?php echo $options['name'];?>：<?php echo $form->textField($model,'name',array('value'=>$model->name)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
-							<?php echo $options['useId'];?>：<?php echo $form->textField($model,'useId',array('value'=>$model->useId)); ?>	                </td>	
+							<?php echo $options['password'];?>：<?php echo $form->textField($model,'password',array('value'=>$model->password)); ?>	                </td>	
 				
 				</tr>	
 				<tr>					<td class="left_txt">
-							<?php echo $options['titlePic'];?>：<?php echo $form->textField($model,'titlePic',array('value'=>$model->titlePic)); ?>	                </td>	
+							<?php echo $options['tel'];?>：<?php echo $form->textField($model,'tel',array('value'=>$model->tel)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['userName'];?>：<?php echo $form->textField($model,'userName',array('value'=>$model->userName)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['userTel'];?>：<?php echo $form->textField($model,'userTel',array('value'=>$model->userTel)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['address'];?>：<?php echo $form->textField($model,'address',array('value'=>$model->address)); ?>	                </td>	
+				
+				</tr>	
+									<td class="left_txt">
+							<?php echo $options['province'];?>：<?php echo $form->textField($model,'province',array('value'=>$model->province)); ?>	                </td>	
+				
+					
+				<tr>					<td class="left_txt">
+							<?php echo $options['city'];?>：<?php echo $form->textField($model,'city',array('value'=>$model->city)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['district'];?>：<?php echo $form->textField($model,'district',array('value'=>$model->district)); ?>	                </td>	
 				
 					
 									<td class="left_txt">
 							<?php echo $options['cdate'];?>：<?php echo $form->textField($model,'cdate',array('value'=>$model->cdate)); ?>	                </td>	
 				
-					
+				</tr>	
 									<td class="left_txt">
-							<?php echo $options['content'];?>：<?php echo $form->textField($model,'content',array('value'=>$model->content)); ?>	                </td>	
+							<?php echo $options['csId'];?>：<?php echo $form->textField($model,'csId',array('value'=>$model->csId)); ?>	                </td>	
 				
 					
+									<td class="left_txt">
+							<?php echo $options['introduct'];?>：<?php echo $form->textField($model,'introduct',array('value'=>$model->introduct)); ?>	                </td>	
+				
+					
+				<tr>					<td class="left_txt">
+							<?php echo $options['lastDate'];?>：<?php echo $form->textField($model,'lastDate',array('value'=>$model->lastDate)); ?>	                </td>	
+				
+					
+									<td class="left_txt">
+							<?php echo $options['qq'];?>：<?php echo $form->textField($model,'qq',array('value'=>$model->qq)); ?>	                </td>	
+				
+				</tr>	
 									<td class="left_txt">
 							<?php echo $options['status'];?>：<?php echo $form->textField($model,'status',array('value'=>$model->status)); ?>	                </td>	
 				
-				</tr>	
+					
+									<td class="left_txt">
+							<?php echo $options['orderDate'];?>：<?php echo $form->textField($model,'orderDate',array('value'=>$model->orderDate)); ?>	                </td>	
+				
+					
 					
 				<tr>
 					<td height="50" class="left_txt" colspan="4" align="center">
@@ -107,7 +147,7 @@ body {
 		        <table  width="100%" >	
 					<tbody style="font-size:12px;">
 						<tr class="list_tbl">
-						<th height="30">文章ID</th><th height="30">文章分类</th><th height="30">文章标题</th><th height="30">用户ID</th><th height="30">文章图片</th><th height="30">创建时间</th><th height="30">文章内容</th><th height="30">状态：-1隐藏 1显示</th>							<th colspan="2" >操作</th>
+						<th height="30">用户ID</th><th height="30">登陆用户名</th><th height="30">单位名称</th><th height="30">登陆密码</th><th height="30">联系电话</th><th height="30">联系人</th><th height="30">联系人电话</th><th height="30">联系地址</th><th height="30">省</th><th height="30">市</th><th height="30"></th><th height="30">创建时间</th><th height="30">渠道商ID</th><th height="30">简介</th><th height="30">最后登陆时间</th><th height="30">联系人QQ</th><th height="30">状态：1有效，2冻结，-1删除</th><th height="30">使用有效期</th>							<th colspan="2" >操作</th>
 						</tr>
 						 <?php 
 							foreach( $info as $n => $v){
@@ -126,13 +166,23 @@ body {
 								echo '
 										<tr class="list_tbl" '.$flag.'>
 																				<td class="link_bt"  valign="bottom">'.$v['id'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['menuId'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['title'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['useId'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['titlePic'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['loginName'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['name'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['password'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['tel'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['userName'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['userTel'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['address'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['province'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['city'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['district'].'</td>
 																				<td class="link_bt"  valign="bottom">'.$v['cdate'].'</td>
-																				<td class="link_bt"  valign="bottom">'.$v['content'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['csId'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['introduct'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['lastDate'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['qq'].'</td>
 																				<td class="link_bt"  valign="bottom">'.$v['status'].'</td>
+																				<td class="link_bt"  valign="bottom">'.$v['orderDate'].'</td>
 																				<td >
 										<span class="link_gn">
 										<a href="#" onClick="edit('.$v['id'].');">

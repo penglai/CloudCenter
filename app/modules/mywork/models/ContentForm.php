@@ -7,14 +7,13 @@
 class ContentForm extends CFormModel
 {
 	public $id;	//文章ID	
+	public $menuId;	//文章分类	
 	public $title;	//文章标题	
-	public $cdate;	//发布时间	
+	public $useId;	//用户ID	
+	public $titlePic;	//文章图片	
+	public $cdate;	//创建时间	
 	public $content;	//文章内容	
-	public $pic;	//列表图标	
-	public $cid;	//所属频道	
-	public $author;	//作者	
-	public $status;	//状态：1显示，2隐藏	
-	public $uid;	//发表用户	
+	public $status;	//状态：-1隐藏 1显示	
 	
 	
 	/**
@@ -23,7 +22,7 @@ class ContentForm extends CFormModel
 	public function rules()
 	{
 		return array(
-				array('title,cdate,content,pic,cid,author,status,uid',
+				array('menuId,title,useId,titlePic,cdate,content,status',
 					'required',
 					'message'=>'不能为空',
 					),
@@ -37,14 +36,13 @@ class ContentForm extends CFormModel
 	{
 		$data['formName'] = "文章管理";
 		$data['id'] = '文章ID'; 
+		$data['menuId'] = '文章分类'; 
 		$data['title'] = '文章标题'; 
-		$data['cdate'] = '发布时间'; 
+		$data['useId'] = '用户ID'; 
+		$data['titlePic'] = '文章图片'; 
+		$data['cdate'] = '创建时间'; 
 		$data['content'] = '文章内容'; 
-		$data['pic'] = '列表图标'; 
-		$data['cid'] = '所属频道'; 
-		$data['author'] = '作者'; 
-		$data['status'] = '状态：1显示，2隐藏'; 
-		$data['uid'] = '发表用户'; 
+		$data['status'] = '状态：-1隐藏 1显示'; 
 		return $data;
 	}
 }
