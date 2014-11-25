@@ -23,37 +23,45 @@ body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative; 
 
 
 .wrapper{
-	min-width: 1000px;
+	min-width: 1024px;
 	margin: 0 auto;
 	position: relative;
+}
+.top_line_bg{
+	position: absolute;
+	width: 100%;
+	background: url(../images/top_line_bg.png) repeat-x;
+	height: 10px;
+	z-index: 9;
 }
 .header{
 	width: 1000px;
 	margin:0 auto;
-	height: 104px;
+	height: 103px;
 	background: #efeff0;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 	position: absolute;
-	top: 15px;
+	top: 20px;
 	overflow: hidden;
 	zoom:1;
-	z-index: 9;
+	z-index: 10;
 	left: 0;
 	right: 0;
 }
 .header .logo{
 	float: left;
-	width: 170px;
-	height: 104px;
+	width: 171px;
+	height: 103px;
 }
 .top_bar{
 	float: left;
 	background: #efeff0 url(../images/top_bar_bg.png) repeat-x left top;
-	width: 830px;
+	width: 829px;
 	position: relative;
+	height: 103px;
 }
 .top_bar .nav{
-	height: 68px;
+	height: 55px;
 }
 .top_bar .nav ul{
 	margin: 13px 0 0 20px;
@@ -78,6 +86,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative; 
 .top_bar .sub_nav {
 	margin-left: 25px;
 	color:#6d6e6e;
+	padding-top: 10px;
 }
 .top_bar .sub_nav li{
 	float: left;
@@ -87,12 +96,12 @@ body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative; 
 .top_bar .sub_nav li a{
 	color: #6d6e6e;
 	background-position: 0 -135px;
-	padding: 0 5px 5px 20px;
+	padding: 0 5px 7px 20px;
 	text-decoration: none;
 }
 .top_bar .sub_nav li a:hover{
 	background-position: 0 -159px;
-	border-bottom: 3px solid #228c99;
+	border-bottom: 2px solid #228c99;
 	color: #208997;
 }
 .search_bar{
@@ -122,17 +131,18 @@ body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative; 
 }
 
 /*footer*/
-.footer{background: #076e71 url(../images/footer_bg.png) repeat-x left top;padding-bottom: 20px;font-size:12px;color:#96a1a3;padding-top: 30px;/*margin-top: -114px;*/}
+.footer{background: #076e71 url(../images/footer_bg.png) repeat-x left top;padding-bottom: 20px;font-size:12px;color:#96a1a3;padding-top: 30px;}
 .footer .col-1{float: left;margin-right: 20px;}
 .footer .col-2 p{line-height: 18px;vertical-align: middle;padding-top: 10px;}
+.footer .col-2{font-family: Arial; font-style: italic;}
 .footer .container{clear: both;overflow: hidden;zoom:1;width: 1000px;margin: 0 auto;}
 .footer strong{color: #fff;font-size: 30px; font-style: italic;margin-right: 20px;position: relative;top: 5px;}
 .footer .scan{vertical-align: middle;float: left;margin-right: 15px;}
 
 /*index hero*/
-.focus_slide{ position: relative;z-index: 3;margin: 0 auto;width: 1000px;height: 805px;overflow: hidden;width: 100%;}
-.focus_slide ul{position: absolute;left: 0; top: 0;width: 100%;height: 805px;}
-.focus_slide ul li{float: left;height: 805px;overflow: hidden;width: 100%;background-position: center center;min-width: 1000px;background-repeat: no-repeat;}
+.focus_slide{ position: relative;z-index: 3;margin: 0 auto;width: 1000px;height: 815px;overflow: hidden;width: 100%;}
+.focus_slide ul{position: absolute;left: 0; top: 0;width: 100%;height: 815px;}
+.focus_slide ul li{float: left;height: 815px;overflow: hidden;width: 100%;background-position: center center;min-width: 1000px;background-repeat: no-repeat;}
 .focus_slide ul li a{width: 100%;height: 100%;display: block;}
 .focus_slide .btn{position: absolute;bottom:10px;left:50%;}
 .focus_slide .btn a{display: inline-block;width: 20px;height: 20px;margin:0 5px;background-position: -39px -95px;cursor: pointer;}
@@ -144,7 +154,7 @@ body{font-size: 12px;font-family:"Microsoft YaHei","宋体";position: relative; 
 	top: 0px;
 	margin: -150px auto 36px;
 	z-index: 99;
-	width: 1006px;
+	width: 1004px;
 	padding-top: 15px;
 	padding-left: 20px;
 	background: url(../images/service_center_bg.png) no-repeat;

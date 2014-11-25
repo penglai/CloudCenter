@@ -7,7 +7,7 @@
 $(function(){
 	// add banner img
 	$('.focus_box li').each(function(){
-		$(this).css({'background-image':'url(' + $(this).find('a').attr('data-src') + ')' })
+		$(this).css({'background-image':'url(' + $(this).find('span').attr('data-src') + ')' })
 	});
 
 	// banner slide
@@ -22,9 +22,9 @@ $(function(){
  		$focusFt = $focus.find('.btn');
  	function reset_w()
  	{
- 		if($(window).width() < 1000){
- 			$focus.css('width','1000px');
-			$li.css('width','1000px');
+ 		if($(window).width() < 1024){
+ 			$focus.css('width','1024px');
+			$li.css('width','1024px');
  		}else{
  			$focus.css('width','100%');
  			$li.css('width',$(window).width());
