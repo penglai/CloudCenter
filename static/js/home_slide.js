@@ -1,9 +1,3 @@
-/* write by reyrey 
-
-	use for homepage
-*/
-
-
 $(function(){
 	// add banner img
 	$('.focus_box li').each(function(){
@@ -103,22 +97,5 @@ $(function(){
  	},function(){
  		timer = setInterval(autoPlay,3000);
  	})
- 	
 
-
- 	
-	 // switch tab
-	function tab(controller,content){
-		controller.each(function(){
-			$(this).mouseover(function(){
-				$index = $(this).index();
-				$(this).addClass('active').siblings().removeClass('active');
-				$(this).siblings('s').stop(true,true).animate({'left':parseInt($(this).position().left) + (parseInt($(this).css('margin-left')) + parseInt($(this).css('margin-right')) + parseInt($(this).outerWidth()))/ 2 - parseInt($('.modle_col .tab s').outerWidth())/ 2},300);
-				content.eq($index).show().siblings().hide();
-			})
-		})
-	}
-	tab($('.news .tab li'),$('.news .tab_content ul'));
-	tab($('.services .tab li'),$('.services .tab_content .list'));
-	tab($('.park_overview .tab li'),$('.park_overview .tab_content .list'));
  });
