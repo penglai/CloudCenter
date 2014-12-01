@@ -25,12 +25,13 @@ $(function(){
 	// tab switch
 	function tab(index){
 		if(index){
-			$('.top_bar .sub_nav li').eq(index-1).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
+			$('.top_bar .sub_nav .current li').eq(index-1).find('a').addClass('current').end().siblings().find('a').removeClass('current');
 			$('.sidebar .switch_tab li').eq(index-1).addClass('current').siblings().removeClass('current');
 			$('.switch_content .swicth_content_section').eq(index-1).fadeIn().siblings().hide();
 		}
 		$('.sidebar .switch_tab li').on('click',function(){
 			$index = $(this).index();
+			$('.top_bar .sub_nav ul.current li').eq($index).find('a').addClass('current').end().siblings().find('a').removeClass('current');
 			$(this).addClass('current').siblings().removeClass('current');
 			$('.switch_content .swicth_content_section').eq($index).fadeIn().siblings().hide();
 		})
@@ -48,7 +49,6 @@ $(function(){
 		if(getUrlParam('subnav'))
 		{
 			subNavIndex = getUrlParam('subnav').toLowerCase();
-			console.log(subNavIndex);
 			switch(subNavIndex)
 			{
 				case '1' :
@@ -80,7 +80,6 @@ $(function(){
 		}
 		if(subNavIndex!=null)
 		{
-			console.log(subNavIndex);
 			tab(subNavIndex);
 		}
 	}
