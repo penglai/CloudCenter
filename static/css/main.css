@@ -78,12 +78,13 @@ body{ font-size: 12px; font-family:"Microsoft YaHei","宋体"; position: relativ
 .page_module_info .inner{ width: 1000px; margin: 0 auto; }
 
 /*sidebar*/
-.sidebar{ width: 175px; float: left; margin-right: 10px; background: #fff; box-shadow: 0px 0px 5px rgba(197,197,198,0.6);padding-bottom: 30px;}
+.sidebar{ width: 175px; float: left; margin-right: 10px; background: #fff; box-shadow: 0px 0px 5px rgba(197,197,198,0.6);padding-bottom: 30px;position: relative;}
 .sidebar .category{ padding: 25px 0 15px; background: url(../images/info_sidebar_category.png) repeat-x center bottom; }
 .sidebar .category span{ display: block; font-size: 16px; text-align: center; }
 .sidebar .category .en{ color: #00a29a; }
 .sidebar .switch_tab li{ text-align: center; cursor: pointer; height: 46px;font-size: 15px; line-height: 46px; color:#6a6c6b; width: 100%; }
 .sidebar .switch_tab li:hover,.sidebar .switch_tab li.current{ background-position: -10px -184px; color: #fff; }
+.sidebar .line{display: block;height: 1px;overflow: hidden;background: #228c99; border-top: 1px solid #70a5b0; width: 136px;position:absolute;left: 50%;margin-left: -68px; bottom:0px;}
 .swicth_content_section{ display: none; }
 .swicth_content_section.current{ display: block; }
 
