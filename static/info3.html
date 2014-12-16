@@ -2,15 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>首页</title>
+<title>详情页面3--图片详情</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <!--[if lt IE 9]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/font.css" />
 <link type="text/css" rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <section class="wrapper">
+    <section class="wrapper module_list">
         <!-- header -->
         <div class="top_line_bg"></div>
         <header class="header">
@@ -18,7 +19,7 @@
             <div class="top_bar">
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="#" class="current">首页</a></li>
+                        <li><a href="index.html">首页</a></li>
                         <li><a href="zol_CID_list.html">中关村CID</a></li>
                         <li><a href="garden_list.html">走进园区</a></li>
                         <li><a href="#">关于我们</a></li>
@@ -61,19 +62,15 @@
             </div>
         </header>
         <!-- banner -->
-        <section class="focus_slide">
-            <ul class="focus_box">
-                <li><span data-src="images/home_slide_1.jpg"></span></li>
-                <li><span data-src="images/home_slide_2.jpg"></span></li>
-                <li><span data-src="images/home_slide_3.jpg"></span></li>
-            </ul>
-            <div class="btn"></div>
-        </section>
-        <!-- service_center -->
-        <section class="service_center">
-            <a href="headquarters_list.html"><img src="images/service_center_1.png" /></a>
-            <a href="#"><img src="images/service_center_2.png" /></a>
-            <a href="#"><img src="images/service_center_3.png" /></a>
+        <section class="headquarters_list_banner"></section>
+        <section class="main_container">
+            <section class="inner">
+                <img src="images/headquarters_thumb.png" class="headquarters_thumb">
+                <div class="headline">
+                    <h1><span class="cn">总部产品中心</span><span class="en">Headquarters Products</span><i class="adorn_line"></i></h1>
+                </div>
+                
+            </section>
         </section>
         <footer class="footer">
             <div class="container">
@@ -89,6 +86,5 @@
         </footer>
     </section>
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/home_slide.js"></script>
 </body>
 </html>
