@@ -1,87 +1,37 @@
+// menu
 $(function(){
-	// nav
-	var $controlBar = $(".top_bar .nav li"),
-		$controlContent = $('.top_bar .sub_nav ul');
-
-	$controlBar.hover(function(){
-		_index = $(this).index();
-		current = $controlBar.find('a.current').parent().index();
-		if(_index>0){
-			$controlContent.eq(_index-1).addClass('current').siblings().removeClass('current');
-		}else{
-			$controlContent.removeClass('current');
-		}
-	},function(){
-		$controlContent.removeClass('current');
-		if(current>0){
-			$controlContent.eq(current-1).addClass('current');
-		}
-	});
-	$controlContent.find('a').on('click',function(){
-		$(this).addClass('current').parent().siblings().find('a').removeClass('current');
-		tab($(this).parent().index()+1);
-	})
-
-	// tab switch
-	function tab(index){
-		if(index){
-			$('.top_bar .sub_nav .current li').eq(index-1).find('a').addClass('current').end().siblings().find('a').removeClass('current');
-			$('.sidebar .switch_tab li').eq(index-1).addClass('current').siblings().removeClass('current');
-			$('.switch_content .swicth_content_section').eq(index-1).fadeIn().siblings().hide();
-		}
-		$('.sidebar .switch_tab li').on('click',function(){
-			$index = $(this).index();
-			$('.top_bar .sub_nav ul.current li').eq($index).find('a').addClass('current').end().siblings().find('a').removeClass('current');
-			$(this).addClass('current').siblings().removeClass('current');
-			$('.switch_content .swicth_content_section').eq($index).fadeIn().siblings().hide();
-		})
-	}
-	tab();
-	// link
-	function getUrlParam(name)
-	{
-		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-		var r = window.location.search.substr(1).match(reg);
-		if (r!=null) return unescape(r[2]); return null;
-	}
-	var subNavIndex;
-	window.onload = function(){
-		if(getUrlParam('subnav'))
-		{
-			subNavIndex = getUrlParam('subnav').toLowerCase();
-			switch(subNavIndex)
-			{
-				case '1' :
-				subNavIndex = '1';
-				break;
-				case '2' :
-				subNavIndex = '2';
-				break;
-				case '3':
-				subNavIndex = 3;
-				break;
-
-				case '4':
-				subNavIndex = 4;
-				break;
-
-				case '5':
-				subNavIndex = 5;
-				break;
-
-				case '6':
-				subNavIndex = 6;
-				break;
-
-				default:
-				subNavIndex = null;
-				break;
+	var $nav = $(".top_bar .nav li"),
+		$subNav = $('.top_bar .sub_nav ul'),
+		timer = null,
+		state = 0;
+		$nav.not(":first").hover(
+			function(){
+				var _index = $(this).index();
+				clearTimeout(timer);
+				$subNav.eq(_index-1).show().siblings().hide();
+			},
+			function(){
+				timer = setTimeout(function(){
+					$subNav.hide();
+				},500)
 			}
-		}
-		if(subNavIndex!=null)
-		{
-			tab(subNavIndex);
-		}
-	}
+		);
+		$subNav.hover(
+			function(){
+				clearTimeout(timer);
+			},
+			function(){
+				timer=setTimeout(function(){
+					$subNav.hide();
+				},300);
+			}
+		);
+});
+//tab switch
+$(function(){
+	$('.sidebar .switch_tab li').on('click',function(){
+		_index = $(this).index();
+		$(this).addClass('current').siblings().removeClass('current');
+		$('.switch_content .swicth_content_section').eq(_index).fadeIn().siblings().hide();
+	})
 })
-
