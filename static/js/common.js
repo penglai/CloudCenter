@@ -1,31 +1,40 @@
 // menu
 $(function(){
-	var $nav = $(".top_bar .nav li"),
+	var $nav = $(".top_bar .nav li:gt(0)"),
+		$current = $(".top_bar .nav li.current").index();
 		$subNav = $('.top_bar .sub_nav ul'),
 		timer = null,
 		state = 0;
-		$nav.not(":first").hover(
+		$nav.find('a.current').parents('li').addClass('active');
+		$nav.not(".active").hover(
 			function(){
 				var _index = $(this).index();
 				clearTimeout(timer);
-				$subNav.eq(_index-1).show().siblings().hide();
+				$nav.not(".active").find('a').removeClass('current');
+				$(this).find('a').addClass('current');
+				$subNav.eq(_index-1).slideDown().siblings().hide();
 			},
 			function(){
 				timer = setTimeout(function(){
 					$subNav.hide();
-				},500)
+					$nav.not(".active").find('a').removeClass('current');
+					$('.top_bar .sub_nav ul.current').show();
+				},300)
 			}
 		);
-		$subNav.hover(
+		$subNav.not('.current').hover(
 			function(){
 				clearTimeout(timer);
 			},
 			function(){
 				timer=setTimeout(function(){
 					$subNav.hide();
+					$('.top_bar .sub_nav ul.current').show();
+					$nav.not(".active").find('a').removeClass('current');
 				},300);
 			}
 		);
+
 });
 //tab switch
 $(function(){
